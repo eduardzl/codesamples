@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Configuration packages="com.verint.textanalytics" monitorInterval="60">
+	<Appenders>
+		<Console name="consoleAppender" target="SYSTEM_OUT">
+			<PatternLayout>
+				<Pattern>%d{ISO8601} [%p] %X{reqId} %c %m%n</Pattern>
+			</PatternLayout>
+		</Console>
+
+		<Async name="asyncAppender">
+			<AppenderRef ref="consoleAppender"/>
+		</Async>
+
+	</Appenders>
+
+	<Loggers>
+		<!--   messages to be logged once by the root logger and again by the specific logger as you may have both the appenders configured -->
+		<Root level="debug" additivity="false">
+			<AppenderRef ref="asyncAppender"/>
+		</Root>
+	</Loggers>
+</Configuration>

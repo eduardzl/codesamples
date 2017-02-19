@@ -1,0 +1,108 @@
+{
+	"responseHeader" : {
+		"status" : 0,
+		"QTime" : 2,
+		"params" : {
+			"indent" : "true",
+			"q" : "*:*",
+			"hl.q" : "(\"android\")",
+			"hl.fl" : "text_en",
+			"wt" : "json",
+			"fq" : ["{!child of='content_type:PARENT'}channel:1271",
+				"{!child of='content_type:PARENT'}id:\"19\"",
+				"speaker_type:\"customer\""],
+			"hl" : "true",
+			"rows" : "1000"
+		}
+	},
+	"response" : {
+		"numFound" : 3,
+		"start" : 0,
+		"docs" : [{
+				"id" : "19-1",
+				"date": "2012-04-07T13:07:49Z",
+				"parentID" : "19",
+				"content_type" : "CHILD",
+				"topics" : ["/service|S22_E26",
+					"/service/assurance|S22_E26"],
+				"topics_f" : ["/service|S22_E26",
+					"/service/assurance|S22_E26"],
+				"text_en" : ["Reference ID 00DE0czFk._500E0IWWqdA big shout out to Michael, Travis, and Tiffany to helping Dianne Humphreys get her phone working again! The AT&T Social Care Division knows how to do its job right, and it does its job well. Now it is time to initiate a company-wide Quality Assurance and/or Accountability check, starting with your call centers and business offices to weed out the employees that caused our problem in the first place. Put an end the days where you pay someone to be useless. One last thing, guys. I noticed that I have good internet connection to online games whose servers use AT&T connections (such as StarCraft II), but terrible lag on games whose servers don't (Left 4 Dead, Borderlands, Mass Effect 3 multiplayer). Do you have an infrastructure problem, or is this evidence of the Net Neutrality controversy? It's a rhetorical question, but feel free to answer that."],
+				"Meta_i_sentiment" : -1,
+				"speaker_type" : "customer",
+				"_root_" : ["19"],
+				"_version_" : 1497622740747681792
+			}, {
+				"id" : "19-2",
+				"date": "2012-04-07T13:07:49Z",
+				"parentID" : "19",
+				"content_type" : "CHILD",
+				"text_en" : ["As a customer for over ten years with over seven active lines I would just like to share with you what horrific customer service your customer care and loyalty depts are providing. After an issue I had a 'new' phone sent out to me under warranty last July. That phone overheated so badly It put my four year old into urgent care for burns on her thumb and palm. I was advised to go to a store and they researched my phone for days leaving me with nothing then told me a new phone would be sent to me and not to return the dangerous one. So I left it with them. Then suddenly in November I was charged a restocking fee. I had to pay over $200 of my own money to drive across state(and mountain passes) to go get the phone and send it back. Under the assurance they would take the fee off. Upwards of ten representatives helped me from late nov to now. All politely apologizing for the mistake and dangerous phone and assuring me i would not be charged. Putting the fee balance on hold while it was corrected. Well now you have HAD the phone since DECEMBER 22 and not taken off the fee..and today your supervisor in loyalty Lydia rep#0653226 very rudely told me not only did the previous reps promises and advice not mean anything but that I would not be getting the fee taken off. I am APPALLED by this service. Not only do I feel taken advantage of but stupid to have put my faith in your company to take care of a loyal customer put in danger and harmed by your phone. I trusted your company,most people would have sued for what happened to my child and contacted the media. I however stayed loyal to my longtime company and put the issue in your hands to fix. I feel horrified at how wrong I was and how AWFUL I have been treated. I will be sharing this story with everyone I know and all clients and parents who come inside my store as it is next to your tukwila southcenter location. I will share my story on fb so no one else can be harmed physically, financially, and emotionally the way I have from you!!! You should be ashamed!!"],
+				"topics" : ["/service|S22_E26",
+					"/service/customer service|S22_E26"],
+				"topics_f" : ["/service|S22_E26",
+					"/service/customer service|S22_E26"],
+				"Meta_i_sentiment" : -2,
+				"speaker_type" : "customer",
+				"_root_" : ["19"],
+				"_version_" : 1497622740748730368
+			}, {
+				"id" : "19-4",
+				"date": "2012-04-07T13:07:49Z",
+				"parentID" : "19",
+				"content_type" : "CHILD",
+				"text_en" : ["Hi James. Thank You for reaching out to us. AT&T is actively working on the Android 5.0 Lollipop software update for the Samsung Galaxy S5. All software updates go through a rigorous quality assurance testing process before being released. We will release Lollipop for the Galaxy S5 as soon as testing is complete, and we’ll post on our Consumer Blog: http://blogs.att.net/consumerblog when it’s available. We appreciate your patience. Thank You. RaymonaS, AT&T Social Media Manager."],
+				"topics" : ["/service|S22_E26",
+					"/service/assurance|S22_E26",
+					"/service/customer service|S22_E26",
+					"/service/support|S22_E26"],
+				"topics_f" : ["/service|S22_E26",
+					"/service/assurance|S22_E26",
+					"/service/customer service|S22_E26",
+					"/service/support|S22_E26"],
+				"Meta_i_sentiment" : -2,
+				"speaker_type" : "customer",
+				"_root_" : ["19"],
+				"_version_" : 1497622740750827520
+			}
+		]
+	},
+	"highlighting" : {
+		
+		"19-1" : {
+			"text_en" : [{
+					"term" : "android",
+					"starts" : 76,
+					"ends" : 83
+				},{
+					"term" : "android",
+					"starts" : 90,
+					"ends" : 97
+				},{
+					"term" : "android",
+					"starts" : 100,
+					"ends" : 107
+				}
+			]
+		},
+		"19-2" : {
+			"text_en" : [{
+					"term" : "android",
+					"starts" : 10,
+					"ends" : 17
+				},{
+					"term" : "android",
+					"starts" : 20,
+					"ends" : 27
+				},{
+					"term" : "android",
+					"starts" : 41,
+					"ends" : 48
+				}
+			]
+		},
+		"19-3" : {
+			"text_en" : []
+		}
+	}
+}

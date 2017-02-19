@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!-- 	This is the Text Engine Configuration file sample. -->
+<!-- 	The root is the tenants element where you can define new tenant. Each tenant has channels list.  -->
+<!-- 	Each channel has it's fileds list.  -->
+<config>
+	<tenants>
+		<!-- Here will be a list of tenants, each tenant has its name and a list of channels -->
+		<tenant name="tenant1">
+			<!-- Here will be a list of channels, each channel has its name and a list of fields -->
+			<channels>
+				<channel name="channel1">
+					<!-- Here will be a list of fields, each field has its name, displayName, dataType, documentHierarchyType as an attribute -->
+					<!-- dataType is enum of: [Text,Int,Date,Boolean,Constant] -->
+					<!-- documentHierarchyType is enum of: [Interaction,Utterance] -->
+					<field name="interaction_sentiment" displayName="Interaction Sentiment" dataType="Int" documentHierarchyType="Interaction"/>
+					<field name="topics_f" displayName="Topics" dataType="Text" documentHierarchyType="Utterance"/>					
+				</channel>
+				<channel name="channel2">					
+					<field name="speaker_type" displayName="Speaker" dataType="Text" documentHierarchyType="Utterance"/>
+					<field name="Meta_s_messageSourceType" displayName="Source Type" dataType="Text" documentHierarchyType="Interaction"/>
+				</channel>
+			</channels>
+		</tenant>
+		<tenant name="tenant2">
+			<channels>
+				<channel name="channel1">
+					<field name="interaction_sentiment" displayName="Interaction Sentiment" dataType="Int" documentHierarchyType="Interaction"/>
+					<field name="Meta_s_author" displayName="Author" dataType="Text" documentHierarchyType="Utterance"/>
+					<field name="speaker_type" displayName="Speaker" dataType="Text" documentHierarchyType="Utterance"/>
+					<field name="Meta_s_messageSourceType" displayName="Source Type" dataType="Text" documentHierarchyType="Interaction"/>
+				</channel>				
+			</channels>
+		</tenant>
+	</tenants>
+</config>

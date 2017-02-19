@@ -1,0 +1,15 @@
+<FindBugsFilter>
+  <Match>        
+        <Bug pattern="EI_EXPOSE_REP" />
+  </Match>
+  
+  <Match>        
+        <Bug pattern="EI_EXPOSE_REP2" />
+  </Match>
+  
+  <Match>
+    <Field type="com.verint.textanalytics.common.logger.JNAResourceManager" />
+    <Bug pattern="SE_BAD_FIELD" />
+  </Match>
+  
+</FindBugsFilter>

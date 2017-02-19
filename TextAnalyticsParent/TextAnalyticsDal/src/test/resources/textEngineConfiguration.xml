@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<config>
+	<tenants>
+		<tenant name="tenant1">
+			<channels>
+				<channel name="channel1">
+					<field name="Meta_i_x1" displayName="x1" dataType="Int" documentHierarchyType="Interaction"/>
+					<field name="Meta_i_x2" displayName="x2" dataType="Int" documentHierarchyType="Utterance"/>
+					<field name="Meta_s_x3" displayName="x3" dataType="Text" documentHierarchyType="Interaction"/>
+					<field name="Meta_s_x4" displayName="x4" dataType="Text" documentHierarchyType="Utterance"/>
+					<field name="Meta_s_x5" displayName="x5" dataType="Text" documentHierarchyType="Utterance"/>
+				</channel>
+				<channel name="channel2">
+					<field name="Meta_s_x3" displayName="x3" dataType="Text" documentHierarchyType="Interaction"/>
+					<field name="Meta_s_x4" displayName="x4" dataType="Text" documentHierarchyType="Utterance"/>
+				</channel>
+			</channels>
+		</tenant>
+		<tenant name="tenant2">
+			<channels>
+				<channel name="channel1">
+					<field name="Meta_i_x1" displayName="x1" dataType="Int" documentHierarchyType="Interaction"/>
+					<field name="Meta_i_x2" displayName="x2" dataType="Int" documentHierarchyType="Utterance"/>
+					<field name="Meta_s_x3" displayName="x3" dataType="Text" documentHierarchyType="Interaction"/>
+				</channel>				
+			</channels>
+		</tenant>
+	</tenants>
+
+
+</config>

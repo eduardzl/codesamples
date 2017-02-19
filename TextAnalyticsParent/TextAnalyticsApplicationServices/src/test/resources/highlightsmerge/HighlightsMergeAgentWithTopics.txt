@@ -1,0 +1,249 @@
+{
+  "response": {
+    "numFound": 8,
+    "start": 0,
+    "docs": [
+    {
+        "id": "1-4",
+        "date": "2012-11-27T00:01:06Z",
+        "language": "en",
+        "text_en": [
+          "Mingying, I apologize, but we have limited chat support for cancellation and exchanges of airline reservation. You will need to speak with one of our Air Travel Service Specialists. Please call us at 1-877-477-7441. You will need to enter your trip number and your call will be sent directly to an agent.  Please remember that all changes must be made before your currently scheduled departure date, and they may incur an airline imposed per ticket change fee and a per ticket service fee. You can also review the specific rules and restrictions associated with your reservation in the Need to Make a Change section of your itinerary displayed on our website."
+        ],
+        "topics": [
+          "/Program/program|S35_E42",
+          "/Service/support|S48_E55",
+          "/Fee/fee|S456_E459",
+          "/TelcoServices/cellular service|S477_E484",
+          "/TelcoServices/service|S477_E484",
+          "/TelcoServices/cellular service|S161_E168",
+          "/TelcoServices/service|S161_E168",
+          "/Fee/fee|S485_E488"
+        ],
+        "speaker_type": "AGENT",
+        "Meta_s_author": "dodo",
+        "Meta_s_authorURL": "http://twitter.com/dodo",
+        "channel": "TelcoDefaultChannel",
+        "childID": "5",
+        "parentID": "e0c82711-0bb5-4599-bc0b-eef4d1a02889",
+        "content_type": "CHILD",
+        "_root_": [
+          "e0c82711-0bb5-4599-bc0b-eef4d1a02889"
+        ],
+        "layers_marking": {
+          "query_terms_layer": [
+            {
+              "term": "apolog",
+              "starts": 12,
+              "ends": 21
+            }
+          ],
+          "topics_layer": [
+            {
+              "topic": "/Program/program",
+              "start": 35,
+              "ends": 42,
+              "sentiments": []
+            },
+            {
+              "topic": "/Service/support",
+              "start": 48,
+              "ends": 55,
+              "sentiments": []
+            },
+            {
+              "topic": "/Fee/fee",
+              "start": 456,
+              "ends": 459,
+              "sentiments": []
+            },
+            {
+              "topic": "/TelcoServices/cellular service",
+              "start": 477,
+              "ends": 484,
+              "sentiments": []
+            },
+            {
+              "topic": "/TelcoServices/service",
+              "start": 477,
+              "ends": 484,
+              "sentiments": []
+            },
+            {
+              "topic": "/TelcoServices/cellular service",
+              "start": 161,
+              "ends": 168,
+              "sentiments": []
+            },
+            {
+              "topic": "/TelcoServices/service",
+              "start": 161,
+              "ends": 168,
+              "sentiments": []
+            },
+            {
+              "topic": "/Fee/fee",
+              "start": 485,
+              "ends": 488,
+              "sentiments": []
+            }
+          ]
+        }
+      },
+      {
+        "id": "e0c82711-0bb5-4599-bc0b-eef4d1a02889-1",
+        "date": "2012-11-27T00:01:06Z",
+        "language": "en",
+        "text_en": [
+          "Hi, Mingying! Thanks for choosing to chat with us today, how may I help you?"
+        ],
+        "speaker_type": "AGENT",
+        "Meta_s_author": "dodo",
+        "Meta_s_authorURL": "http://twitter.com/dodo",
+        "channel": "TelcoDefaultChannel",
+        "childID": "2",
+        "parentID": "e0c82711-0bb5-4599-bc0b-eef4d1a02889",
+        "content_type": "CHILD",
+        "_root_": [
+          "e0c82711-0bb5-4599-bc0b-eef4d1a02889"
+        ],
+        "layers_marking": {
+          "query_terms_layer": [],
+          "topics_layer": []
+        }
+      },
+      {
+        "id": "e0c82711-0bb5-4599-bc0b-eef4d1a02889-3",
+        "date": "2012-11-27T00:01:06Z",
+        "language": "en",
+        "text_en": [
+          "Ok, I understand. I'll be more than happy to check what options may be available. Please give me a moment to look up your reservation."
+        ],
+        "speaker_type": "AGENT",
+        "Meta_s_author": "dodo",
+        "Meta_s_authorURL": "http://twitter.com/dodo",
+        "channel": "TelcoDefaultChannel",
+        "childID": "4",
+        "parentID": "e0c82711-0bb5-4599-bc0b-eef4d1a02889",
+        "content_type": "CHILD",
+        "_root_": [
+          "e0c82711-0bb5-4599-bc0b-eef4d1a02889"
+        ],
+        "layers_marking": {
+          "query_terms_layer": [],
+          "topics_layer": []
+        }
+      },
+      {
+        "id": "e0c82711-0bb5-4599-bc0b-eef4d1a02889-5",
+        "date": "2012-11-27T00:01:06Z",
+        "language": "en",
+        "text_en": [
+          "I truly am sorry for all of this inconvenience but you will need to call us by phone to cancel it."
+        ],
+        "speaker_type": "AGENT",
+        "Meta_s_author": "dodo",
+        "Meta_s_authorURL": "http://twitter.com/dodo",
+        "channel": "TelcoDefaultChannel",
+        "childID": "6",
+        "parentID": "e0c82711-0bb5-4599-bc0b-eef4d1a02889",
+        "content_type": "CHILD",
+        "_root_": [
+          "e0c82711-0bb5-4599-bc0b-eef4d1a02889"
+        ],
+        "layers_marking": {
+          "query_terms_layer": [],
+          "topics_layer": []
+        }
+      },
+      {
+        "id": "e0c82711-0bb5-4599-bc0b-eef4d1a02889-6",
+        "date": "2012-11-27T00:01:06Z",
+        "language": "en",
+        "text_en": [
+          "Are you still with me?"
+        ],
+        "speaker_type": "AGENT",
+        "Meta_s_author": "dodo",
+        "Meta_s_authorURL": "http://twitter.com/dodo",
+        "channel": "TelcoDefaultChannel",
+        "childID": "7",
+        "parentID": "e0c82711-0bb5-4599-bc0b-eef4d1a02889",
+        "content_type": "CHILD",
+        "_root_": [
+          "e0c82711-0bb5-4599-bc0b-eef4d1a02889"
+        ],
+        "layers_marking": {
+          "query_terms_layer": [],
+          "topics_layer": []
+        }
+      },
+      {
+        "id": "e0c82711-0bb5-4599-bc0b-eef4d1a02889-8",
+        "date": "2012-11-27T00:01:06Z",
+        "language": "en",
+        "text_en": [
+          "Yes, if you are outside the U.S. you will need to call us by dialing +1-212-444-0022. Sorry about that."
+        ],
+        "speaker_type": "AGENT",
+        "Meta_s_author": "dodo",
+        "Meta_s_authorURL": "http://twitter.com/dodo",
+        "channel": "TelcoDefaultChannel",
+        "childID": "9",
+        "parentID": "e0c82711-0bb5-4599-bc0b-eef4d1a02889",
+        "content_type": "CHILD",
+        "_root_": [
+          "e0c82711-0bb5-4599-bc0b-eef4d1a02889"
+        ],
+        "layers_marking": {
+          "query_terms_layer": [],
+          "topics_layer": []
+        }
+      },
+      {
+        "id": "e0c82711-0bb5-4599-bc0b-eef4d1a02889-10",
+        "date": "2012-11-27T00:01:06Z",
+        "language": "en",
+        "text_en": [
+          "Great, are there any other questions I can answer for you today?"
+        ],
+        "speaker_type": "AGENT",
+        "Meta_s_author": "dodo",
+        "Meta_s_authorURL": "http://twitter.com/dodo",
+        "channel": "TelcoDefaultChannel",
+        "childID": "11",
+        "parentID": "e0c82711-0bb5-4599-bc0b-eef4d1a02889",
+        "content_type": "CHILD",
+        "_root_": [
+          "e0c82711-0bb5-4599-bc0b-eef4d1a02889"
+        ],
+        "layers_marking": {
+          "query_terms_layer": [],
+          "topics_layer": []
+        }
+      },
+      {
+        "id": "e0c82711-0bb5-4599-bc0b-eef4d1a02889-12",
+        "date": "2012-11-27T00:01:06Z",
+        "language": "en",
+        "text_en": [
+          "You're very welcome and thank you for choosing to chat with us today. Please, do not hesitate to chat with us again if you need anything else. Have an excellent and productive day!"
+        ],
+        "speaker_type": "AGENT",
+        "Meta_s_author": "dodo",
+        "Meta_s_authorURL": "http://twitter.com/dodo",
+        "channel": "TelcoDefaultChannel",
+        "childID": "13",
+        "parentID": "e0c82711-0bb5-4599-bc0b-eef4d1a02889",
+        "content_type": "CHILD",
+        "_root_": [
+          "e0c82711-0bb5-4599-bc0b-eef4d1a02889"
+        ],
+        "layers_marking": {
+          "query_terms_layer": [],
+          "topics_layer": []
+        }
+      }
+    ]
+  }
+}

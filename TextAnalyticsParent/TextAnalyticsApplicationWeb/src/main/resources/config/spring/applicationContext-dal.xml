@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+  						    http://www.springframework.org/schema/beans/spring-beans.xsd
+  						    http://www.springframework.org/schema/util 
+							http://www.springframework.org/schema/util/spring-util.xsd
+							http://www.springframework.org/schema/context
+							http://www.springframework.org/schema/context/spring-context.xsd"
+	   default-lazy-init="true">
+			
+	<bean class="com.verint.textanalytics.dal.rest.RestDataAccess" scope="singleton" lazy-init="true">
+		<constructor-arg ref="configurationManager"/>
+	</bean>
+					
+	<bean class="com.verint.textanalytics.dal.darwin.DarwinTextAnalyticsProvider" scope="singleton" lazy-init="true" init-method="initialize" />
+				
+	<bean class="com.verint.textanalytics.dal.darwin.SolrResponseConverter" scope="singleton" lazy-init="true" primary="true">
+		<constructor-arg ref="metricsSet"></constructor-arg>
+	</bean>
+
+	<bean class="com.verint.textanalytics.dal.darwin.EASearchResponseConverter" scope="singleton" lazy-init="true" primary="false"></bean>
+	
+	<bean class="com.verint.textanalytics.dal.darwin.SolrRequestGenerator" scope="singleton" lazy-init="true" primary="true" init-method="initialize">
+		<constructor-arg ref="metricsSet"></constructor-arg>
+	</bean>
+		
+	<bean class="com.verint.textanalytics.dal.darwin.EASearchRequestGenerator" scope="singleton" lazy-init="true" primary="true"></bean>
+
+	<bean class="com.verint.textanalytics.dal.configService.ConfigurationServiceProvider" scope="singleton" lazy-init="true" init-method="initialize"/>
+	<bean class="com.verint.textanalytics.dal.configService.ConfigServiceResponseConvertor" scope="singleton" lazy-init="true"/>
+	<bean class="com.verint.textanalytics.dal.configService.ConfigServiceRequestGenerator" scope="singleton" lazy-init="true"/>
+
+	<bean class="com.verint.textanalytics.dal.configService.AnalyticsTaggerRequestGenerator" scope="singleton" lazy-init="true"/>
+	<bean class="com.verint.textanalytics.dal.configService.AnalyticsTaggerResponseGenerator" scope="singleton" lazy-init="true"/>
+	
+	<bean class="com.verint.textanalytics.dal.modelEditor.ModelEditorProvider" scope="singleton" lazy-init="true" init-method="initialize" />
+	<bean class="com.verint.textanalytics.dal.modelEditor.ConfigServiceRequestGenerator" scope="singleton" lazy-init="true" />
+	<bean class="com.verint.textanalytics.dal.modelEditor.ConfigServiceResponseConvertor" scope="singleton" lazy-init="true" />
+	
+	<bean class="com.verint.textanalytics.dal.darwin.SolrQueryParameters" scope="singleton" lazy-init="true">
+		<property name="facetMinCount" value="1"></property>
+		<property name="facetLimit" value="20"></property>
+		<property name="topicsFacetLimit" value="-1"></property>		
+		<property name="searchInteractionsResultSetSize" value="1500"></property>
+		<property name="searchInteractionsResultSetSizeInFacetQueries" value="0"></property>
+		<property name="childDocumentsForParentLimit" value="1000"></property>
+		<property name="responseFormat" value="json"></property>
+		<property name="responseIdentation" value="true"></property>		
+    
+	</bean>
+
+
+	<!-- TextEngineSchemeService -->
+		
+	
+	<bean id="channelsSpecificFieldsFile" class="com.verint.textanalytics.common.configuration.ConfigurationFile" scope="singleton" lazy-init="true">
+		<constructor-arg name="path" value="/TextAnalyticsWebApp/Config/textEngineCustomFields.xml" />
+		<constructor-arg name="pathType" value="DataDirRelativePath" />
+		<constructor-arg name="configurationSource" value="XMLConfiguration" />
+		<constructor-arg name="isMandatory" value="true" />
+	</bean>
+		
+
+	<bean id="TextEngineSchemeService" class="com.verint.textanalytics.dal.darwin.TextEngineSchemaService" scope="singleton" lazy-init="true">		
+		<constructor-arg ref="channelsSpecificFieldsFile" />
+		<property name="vtaInteractionLevelPredefinedFields" ref="vtaInteractionLevelPredefinedFields" />
+		<property name="vtaUtteranceLevelPredefinedFields" ref="vtaUtteranceLevelPredefinedFields" />
+		<property name="sourceTypeSpecificFields" ref="sourceTypeSpecificFields"></property>
+	</bean>
+	
+	<!-- Interaction Level pre-defined field  -->
+	<util:map id="vtaInteractionLevelPredefinedFields" map-class="java.util.HashMap" key-type="java.lang.String" value-type="com.verint.textanalytics.model.documentSchema.TextSchemaField">        
+        <entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).documentId}" value-ref="idFieldInteraction"/>
+        <entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).channel}" value-ref="channelFieldInteraction"/>
+        <entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).sourceType}" value-ref="sourceTypeField"/>
+        <entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).relevancyScore}" value-ref="scoreField"/>
+	    <entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).parentDate}" value-ref="dateFieldInteraction"/>
+	    <entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).categoriesIds}" value-ref="categoriesInteraction"/>
+		<entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).interactionSentimentIsMixed}" value-ref="interactionSentimentIsMixed"/>
+
+
+		<!-- Topics -->
+		<entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).topics_f_total}" value-ref="topics_f_totalField"/>
+		<entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).topics_f_agent}" value-ref="topics_f_agentField"/>
+		<entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).topics_f_customer}" value-ref="topics_f_customerField"/>
+
+		<!-- Relations -->
+		<entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).relations_f_total}" value-ref="relations_f_totalField"/>
+		<entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).relations_f_agent}" value-ref="relations_f_agentField"/>
+		<entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).relations_f_customer}" value-ref="relations_f_customerField"/>
+
+		<!-- KeyTerms -->
+		<entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).keyterms_f_total}" value-ref="keyterms_f_totalField"/>
+		<entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).keyterms_f_agent}" value-ref="keyterms_f_agentField"/>
+		<entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).keyterms_f_customer}" value-ref="keyterms_f_customerField"/>
+
+
+		<entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).orgIds}" value-ref="orgsField"/>
+		<entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).groupIds}" value-ref="groupsField"/>
+		<entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).peopleIds}" value-ref="peopleField"/>
+
+	    <!-- agent fields -->
+	    <entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).agentNames}" value-ref="agentNamesField"/>
+	    <entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).agentLocalStartTime}" value-ref="agentLocalStartTimeField"/>
+	    <entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).agentTimeZone}" value-ref="agentTimeZoneField"/>
+	    <entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).agentMessagesCount}" value-ref="agentMessagesCountField"/>
+	    <entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).agentAvgResponseTime}" value-ref="agentAvgResponseTimeField"/>
+	    	    
+	    <!-- customer fields -->
+		<entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).customerNames}" value-ref="customerNamesField"/>
+	    <entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).customerLocalStartTime}" value-ref="customerLocalStartTimeField"/>
+	    <entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).customerTimeZone}" value-ref="customerTimeZoneField"/>
+	    <entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).customerMessagesCount}" value-ref="customerMessagesCountField"/>
+	    <entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).customerAvgResponseTime}" value-ref="customerAvgResponseTimeField"/>
+	    
+	    <entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).messagesCount}" value-ref="messagesCountField"/>
+		<entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).handleTime}" value-ref="handleTimeField"/>
+		<entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).interactionSentiment}" value-ref="interactionSentimentField"/>			                   
+    </util:map>
+    
+    <!-- Uttertance level pre-defined field -->
+    <util:map id="vtaUtteranceLevelPredefinedFields" map-class="java.util.HashMap" key-type="java.lang.String" value-type="com.verint.textanalytics.model.documentSchema.TextSchemaField">        
+        <entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).documentId}" value-ref="idFieldUtterance"/>
+        <entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).channel}" value-ref="channelFieldUtterance"/>
+        <entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).topics_f}" value-ref="topics_fField"/>
+        <entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).topics}" value-ref="topicsField"/>
+        <entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).relations_f}" value-ref="relations_fField"/>
+        <entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).relations}" value-ref="relationsField"/>
+        <entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).keyterms_f}" value-ref="keyterms_fField"/>
+        <entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).keyterms}" value-ref="keytermsField"/>
+		<entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).childDate}" value-ref="dateFieldUtterance"/>
+		<entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).speakerType}" value-ref="speakerTypeField"/>
+		<entry key="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).language}" value-ref="languageField"/>					
+    </util:map>
+    
+    <util:map id="sourceTypeSpecificFields" map-class="java.util.HashMap" key-type="com.verint.textanalytics.model.interactions.SourceType" value-type="java.util.ArrayList">        
+        <entry key="#{T(com.verint.textanalytics.model.interactions.SourceType).Chat}" value-ref="chatSourceTypeFields"/>
+        <entry key="#{T(com.verint.textanalytics.model.interactions.SourceType).Email}" value-ref="emailSourceTypeFields"/>        					
+    </util:map>
+    
+    <util:list id="chatSourceTypeFields" value-type="com.verint.textanalytics.model.documentSchema.TextSchemaField">
+    	<ref bean="maxSimultaneousChatsField"></ref>
+    	<ref bean="numberOfRobotMessagesField"></ref>
+    	<ref bean="idleTimeField"></ref>
+	</util:list>
+            
+    <util:list id="emailSourceTypeFields" value-type="com.verint.textanalytics.model.documentSchema.TextSchemaField">
+    	<ref bean="subject"></ref>
+    	<ref bean="employeesEmails"></ref>
+    	<ref bean="customerEmails"></ref>
+    </util:list>
+            
+    <!-- Interaction level fields -->    						
+	<bean id="idFieldInteraction" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).documentId}"> </property>
+		<property name="displayFieldName" value="Id"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+			
+	<bean id="channelFieldInteraction" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).channel}"> </property>
+		<property name="displayFieldName" value="Channel"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+		
+	<bean id="sourceTypeField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).sourceType}"> </property>
+		<property name="displayFieldName" value="Source Type"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>	
+		
+	<bean id="scoreField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).relevancyScore}"> </property>
+		<property name="displayFieldName" value="Interaction_RelevancyScore"> </property>
+		<property name="fieldDataType" value="Int"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+	
+	<bean id="dateFieldInteraction" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).parentDate}"> </property>
+		<property name="displayFieldName" value="Date"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+
+	<bean id="categoriesInteraction" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).categoriesIds}"> </property>
+		<property name="displayFieldName" value="Interaction_Categories"> </property>
+		<property name="fieldDataType" value="Int"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+
+	<bean id="interactionSentimentIsMixed" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).interactionSentimentIsMixed}"> </property>
+		<property name="displayFieldName" value="Interaction_Categories"> </property>
+		<property name="fieldDataType" value="Boolean"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+
+
+
+	<bean id="orgsField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).orgIds}"> </property>
+		<property name="displayFieldName" value="Interaction_Organizations"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+
+	<bean id="groupsField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).groupIds}"> </property>
+		<property name="displayFieldName" value="Interaction_Groups"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+
+	<bean id="peopleField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).peopleIds}"> </property>
+		<property name="displayFieldName" value="Interaction_People"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+				
+	<bean id="agentNamesField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).agentNames}"> </property>
+		<property name="displayFieldName" value="Agent Name"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+		
+	<bean id="agentLocalStartTimeField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).agentLocalStartTime}"> </property>
+		<property name="displayFieldName" value="Agent Local Start Time"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+	
+	<bean id="agentTimeZoneField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).agentTimeZone}"></property>
+		<property name="displayFieldName" value="Agent Time Zone"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+	
+	<bean id="agentMessagesCountField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).agentMessagesCount}"></property>
+		<property name="displayFieldName" value="Agent Messages Count"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+	
+	<bean id="agentAvgResponseTimeField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).agentAvgResponseTime}"></property>
+		<property name="displayFieldName" value="Agent Average Response Time"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+										
+	<bean id="customerNamesField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).customerNames}"> </property>
+		<property name="displayFieldName" value="Customer Name"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+		
+	<bean id="customerLocalStartTimeField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).customerLocalStartTime}"> </property>
+		<property name="displayFieldName" value="Customer Local Start Time"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+	
+	<bean id="customerTimeZoneField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).customerTimeZone}"></property>
+		<property name="displayFieldName" value="Customer Time Zone"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+	
+	<bean id="customerMessagesCountField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).customerMessagesCount}"></property>
+		<property name="displayFieldName" value="Customer Messages Count"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+	
+	<bean id="customerAvgResponseTimeField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).customerAvgResponseTime}"></property>
+		<property name="displayFieldName" value="Customer Average Response Time"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+		
+	<bean id="messagesCountField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).messagesCount}"></property>
+		<property name="displayFieldName" value="Interaction_MessagesCount"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+	
+	<bean id="handleTimeField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).handleTime}"></property>
+		<property name="displayFieldName" value="Handle Time"> </property>
+		<property name="fieldDataType" value="Int"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+	
+	<bean id="interactionSentimentField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).interactionSentiment}"></property>
+		<property name="displayFieldName" value="Interaction_Sentiment"> </property>
+		<property name="fieldDataType" value="Int"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+	
+	
+	<!-- Chat Source Type predefined fields -->
+	<bean id="maxSimultaneousChatsField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).maxSimultaneousChats}"> </property>
+		<property name="displayFieldName" value="Interaction_MaxSimultaneousChats"></property>
+		<property name="fieldDataType" value="Int"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>		
+	</bean>
+	
+	<bean id="numberOfRobotMessagesField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).numberOfRobotMessages}"> </property>
+		<property name="displayFieldName" value="Interaction_NumberOfRobotMessages"></property>
+		<property name="fieldDataType" value="Int"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>		
+	</bean>
+	
+	<bean id="idleTimeField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).idleTime}"> </property>
+		<property name="displayFieldName" value="Interaction_IdleTime"></property>
+		<property name="fieldDataType" value="Int"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>		
+	</bean>
+		
+	<!-- Utterance level fields -->
+	<bean id="idFieldUtterance" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).documentId}"> </property>
+		<property name="displayFieldName" value="Id"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Utterance"></property>
+	</bean>
+	
+	<bean id="channelFieldUtterance" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).channel}"> </property>
+		<property name="displayFieldName" value="Channel"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Utterance"></property>
+	</bean>
+	
+	<bean id="topics_fField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).topics_f}"> </property>
+		<property name="displayFieldName" value="Entity"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Utterance"></property>
+	</bean>
+
+	<bean id="topics_f_totalField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).topics_f_total}"> </property>
+		<property name="displayFieldName" value="Entity"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+
+	<bean id="topics_f_agentField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).topics_f_agent}"> </property>
+		<property name="displayFieldName" value="Entity"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+
+	<bean id="topics_f_customerField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).topics_f_customer}"> </property>
+		<property name="displayFieldName" value="Entity"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+	
+	<bean id="topicsField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).topics}"> </property>
+		<property name="displayFieldName" value="Entity"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Utterance"></property>
+	</bean>
+	
+	<bean id="relations_fField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).relations_f}"> </property>
+		<property name="displayFieldName" value="Relation"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Utterance"></property>
+	</bean>
+
+	<bean id="relations_f_totalField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).relations_f_total}"> </property>
+		<property name="displayFieldName" value="Relation"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+
+	<bean id="relations_f_agentField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).relations_f_agent}"> </property>
+		<property name="displayFieldName" value="Relation"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+
+	<bean id="relations_f_customerField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).relations_f_customer}"> </property>
+		<property name="displayFieldName" value="Relation"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+	
+	<bean id="relationsField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).relations}"> </property>
+		<property name="displayFieldName" value="Relation"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Utterance"></property>
+	</bean>
+
+	<bean id="keyterms_fField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).keyterms_f}"> </property>
+		<property name="displayFieldName" value="Keyterm"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Utterance"></property>
+	</bean>
+
+	<bean id="keyterms_f_totalField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).keyterms_f_total}"> </property>
+		<property name="displayFieldName" value="Keyterm"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+
+	<bean id="keyterms_f_agentField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).keyterms_f_agent}"> </property>
+		<property name="displayFieldName" value="Keyterm"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+
+	<bean id="keyterms_f_customerField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).keyterms_f_customer}"> </property>
+		<property name="displayFieldName" value="Keyterm"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+	
+	<bean id="keytermsField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).keyterms}"> </property>
+		<property name="displayFieldName" value="Keyterm"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Utterance"></property>
+	</bean>
+	
+	<bean id="dateFieldUtterance" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).childDate}"> </property>
+		<property name="displayFieldName" value="Date"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Utterance"></property>
+	</bean>
+	
+	<bean id="speakerTypeField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).speakerType}"> </property>
+		<property name="displayFieldName" value="Speaker Type"> </property>
+		<property name="fieldDataType" value="Text"></property>
+	</bean>
+	
+	<bean id="languageField" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).language}"> </property>
+		<property name="displayFieldName" value="Language"> </property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Utterance"></property>
+	</bean>
+	
+	<!-- Email Source Type predefined fields -->
+	<bean id="subject" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).subject}"> </property>
+		<property name="displayFieldName" value="Interaction_EmailSubject"></property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>		
+	</bean>
+	
+	<bean id="employeesEmails" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).employeesEmails}"> </property>
+		<property name="displayFieldName" value="Interaction_EmployeeEmails"></property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>		
+	</bean>
+	
+	<bean id="customerEmails" class="com.verint.textanalytics.model.documentSchema.TextSchemaField" scope="singleton" lazy-init="true">
+		<property name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.SchemaFieldNames).customerEmails}"> </property>
+		<property name="displayFieldName" value="Interaction_CustomerEmails"></property>
+		<property name="fieldDataType" value="Text"></property>
+		<property name="documentHierarchyType" value="Interaction"></property>
+	</bean>
+
+	<bean id="vtaSyntaxQueryAnalyzer" class="com.verint.textanalytics.dal.darwin.vtasyntax.VTASyntaxAnalyzer" scope="singleton" lazy-init="true">
+
+	</bean>
+
+</beans>

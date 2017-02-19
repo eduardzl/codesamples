@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure.dtd">
+
+
+<Configure id="Server" class="org.eclipse.jetty.server.Server">
+	
+	<Get name="ThreadPool">
+      <Set name="minThreads" type="int"><Property name="jetty.threadPool.minThreads" deprecated="threads.min" default="10"/></Set>
+      <Set name="maxThreads" type="int"><Property name="jetty.threadPool.maxThreads" deprecated="threads.max" default="200"/></Set>
+      <Set name="idleTimeout" type="int"><Property name="jetty.threadPool.idleTimeout" deprecated="threads.timeout" default="60000"/></Set>
+      <Set name="detailedDump">false</Set>
+    </Get>
+	
+	<!-- =========================================================== -->
+    <!-- Configure Request Log                                       -->
+    <!-- =========================================================== -->        
+	<Set name="handler">
+	  <New id="Handlers" class="org.eclipse.jetty.server.handler.HandlerCollection">
+		<Set name="handlers">
+		  <Array type="org.eclipse.jetty.server.Handler">
+			<Item>
+			  <New id="Contexts" class="org.eclipse.jetty.server.handler.ContextHandlerCollection"/>
+			</Item>
+			<Item>
+			  <New id="DefaultHandler" class="org.eclipse.jetty.server.handler.DefaultHandler"/>
+			</Item>
+			<Item>
+			  <New id="RequestLog" class="org.eclipse.jetty.server.handler.RequestLogHandler"/>
+			</Item>
+		  </Array>
+		</Set>
+	  </New>
+	</Set>
+	
+	<!--
+	<Ref id="RequestLog">
+	  <Set name="requestLog">
+		<New id="RequestLogImpl" class="org.eclipse.jetty.server.NCSARequestLog">
+		  <Arg><SystemProperty name="jetty.logs" default="c:\\temp"/>/yyyy_mm_dd.request.log</Arg>
+		  <Set name="retainDays">90</Set>
+		  <Set name="append">true</Set>
+		  <Set name="extended">true</Set>
+		  <Set name="LogTimeZone">GMT</Set>
+		</New>
+	  </Set>
+	</Ref>  
+	-->
+</Configure>

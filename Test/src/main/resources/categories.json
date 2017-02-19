@@ -1,0 +1,946 @@
+{
+    "maxId": 53,
+    "categories": [
+        {
+            "lastModifiedDateTime": "2016-01-11T16:43:36.850Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:%5C%22not%5C%20working%5C%22)%20OR%20(text_en:%5C%22something%5C%20wrong%5C%22)%20OR%20(text_en:frozen)%20OR%20(text_en:%5C%22technical%5C%20support%5C%22)%20OR%20(text_en:%5C%22technical%5C%20department%5C%22)%20OR%20(text_en:slow)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:%5C%22not%5C%20working%5C%22)%20OR%20(text_en:%5C%22something%5C%20wrong%5C%22)%20OR%20(text_en:frozen)%20OR%20(text_en:%5C%22technical%5C%20support%5C%22)%20OR%20(text_en:%5C%22technical%5C%20department%5C%22)%20OR%20(text_en:slow)&fq=content_type:PARENT",
+            "name": "Technical Issues",
+            "id": 1,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "",
+                "searchModel": {
+                    "model": {
+                        "terms": ["\"not working\" \"something wrong\" frozen \"technical support\" \"technical department\" slow"],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 0
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-11T16:34:52.127Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:%5C%22change%5C%20plan%5C%22)%20OR%20(text_en:%5C%22upgrade%5C%22)%20OR%20(text_en:plan)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:%5C%22change%5C%20plan%5C%22)%20OR%20(text_en:%5C%22upgrade%5C%22)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:plan)&fq=content_type:PARENT",
+            "name": "Plan Change",
+            "id": 2,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "",
+                "searchModel": {
+                    "model": {
+                        "terms": [
+                            "\"change plan\" \"upgrade\"",
+                            "plan"
+                        ],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 0
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-11T16:43:15.010Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:tv)%20OR%20(text_en:television)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:tv)%20OR%20(text_en:television)&fq=content_type:PARENT",
+            "name": "Television",
+            "id": 3,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "",
+                "searchModel": {
+                    "model": {
+                        "terms": ["tv television"],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 0
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-11T16:35:51.658Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:complaint)%20OR%20(text_en:complain)%20OR%20(text_en:complaints)%20OR%20(text_en:frustrated)%20OR%20(text_en:complaining)%20OR%20(text_en:%5C%22not%5C%20happy%5C%22)%20OR%20(text_en:%5C%22consumer%5C%20affairs%5C%22)%20OR%20(text_en:fares)%20OR%20(text_en:fears)%20OR%20(text_en:better)%20OR%20(text_en:business)%20OR%20(text_en:%5C%22lots%5C%20of%5C%20problems%5C%22)%20OR%20(text_en:inconvenience)%20OR%20(text_en:frustration)%20OR%20(text_en:ridiculous)%20OR%20(text_en:consumer)%20OR%20(text_en:%5C%22complaints%5C%20department%5C%22)%20OR%20(text_en:%5C%22complain%5C%20to%5C%20the%5C%22)%20OR%20(text_en:%5C%22want%5C%20to%5C%20complain%5C%22)%20OR%20(text_en:%5C%22make%5C%20complaint%5C%22)%20OR%20(text_en:concerned)%20OR%20(text_en:unacceptable)%20OR%20(text_en:annoyed)%20OR%20(text_en:%5C%22your%5C%20mistake%5C%22%20AND%20speaker_type:Customer)%20OR%20(text_en:bloody)%20OR%20(text_en:%5C%22not%5C%20good%5C%20enough%5C%22)%20OR%20(text_en:%5C%22complain%5C%20team%5C%22)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:complaint)%20OR%20(text_en:complain)%20OR%20(text_en:complaints)%20OR%20(text_en:frustrated)%20OR%20(text_en:complaining)%20OR%20(text_en:%5C%22not%5C%20happy%5C%22)%20OR%20(text_en:%5C%22consumer%5C%20affairs%5C%22)%20OR%20(text_en:fares)%20OR%20(text_en:fears)%20OR%20(text_en:better)%20OR%20(text_en:business)%20OR%20(text_en:%5C%22lots%5C%20of%5C%20problems%5C%22)%20OR%20(text_en:inconvenience)%20OR%20(text_en:frustration)%20OR%20(text_en:ridiculous)%20OR%20(text_en:consumer)%20OR%20(text_en:%5C%22complaints%5C%20department%5C%22)%20OR%20(text_en:%5C%22complain%5C%20to%5C%20the%5C%22)%20OR%20(text_en:%5C%22want%5C%20to%5C%20complain%5C%22)%20OR%20(text_en:%5C%22make%5C%20complaint%5C%22)%20OR%20(text_en:concerned)%20OR%20(text_en:unacceptable)%20OR%20(text_en:annoyed)%20OR%20(text_en:%5C%22your%5C%20mistake%5C%22%20AND%20speaker_type:Customer)%20OR%20(text_en:bloody)%20OR%20(text_en:%5C%22not%5C%20good%5C%20enough%5C%22)%20OR%20(text_en:%5C%22complain%5C%20team%5C%22)&fq=content_type:PARENT",
+            "name": "Complaints",
+            "id": 4,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "",
+                "searchModel": {
+                    "model": {
+                        "terms": ["complaint complain complaints frustrated complaining \"not happy\" \"consumer affairs\" fares fears better business \"lots of problems\" inconvenience frustration ridiculous consumer \"complaints department\" \"complain to the\" \"want to complain\" \"make complaint\" concerned unacceptable annoyed c:\"your mistake\" bloody \"not good enough\" \"complain team\""],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 0
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-11T16:42:54.716Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:%5C%22cancellation%5C%22)%20OR%20(text_en:%5C%22cancel%5C%20account%5C%22)%20OR%20(text_en:%5C%22cancel%5C%22)%20OR%20(text_en:%5C%22canceled%5C%22)%20OR%20(text_en:%5C%22cancelled%5C%22)%20OR%20(text_en:%5C%22like%5C%20to%5C%20cancel%5C%22)%20OR%20(text_en:%5C%22i%5C%20need%5C%20to%5C%20cancel%5C%22)%20OR%20(text_en:%5C%22reason%5C%20for%5C%20cancelling%5C%22)%20OR%20(text_en:%5C%22reason%5C%20cancellation%5C%22)%20OR%20(text_en:%5C%22cancelling%5C%22)%20OR%20(text_en:%5C%22%5C%20cancel%5C%22)%20OR%20(text_en:%5C%22cancelling%5C%20account%5C%22)%20OR%20(text_en:%5C%22cancel%5C%20my%5C%22)%20OR%20(text_en:%5C%22cancel%5C%20service%5C%22)%20OR%20(text_en:%5C%22need%5C%20to%5C%20cancel%5C%22)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:%5C%22cancellation%5C%22)%20OR%20(text_en:%5C%22cancel%5C%20account%5C%22)%20OR%20(text_en:%5C%22cancel%5C%22)%20OR%20(text_en:%5C%22canceled%5C%22)%20OR%20(text_en:%5C%22cancelled%5C%22)%20OR%20(text_en:%5C%22like%5C%20to%5C%20cancel%5C%22)%20OR%20(text_en:%5C%22i%5C%20need%5C%20to%5C%20cancel%5C%22)%20OR%20(text_en:%5C%22reason%5C%20for%5C%20cancelling%5C%22)%20OR%20(text_en:%5C%22reason%5C%20cancellation%5C%22)%20OR%20(text_en:%5C%22cancelling%5C%22)%20OR%20(text_en:%5C%22%5C%20cancel%5C%22)%20OR%20(text_en:%5C%22cancelling%5C%20account%5C%22)%20OR%20(text_en:%5C%22cancel%5C%20my%5C%22)%20OR%20(text_en:%5C%22cancel%5C%20service%5C%22)%20OR%20(text_en:%5C%22need%5C%20to%5C%20cancel%5C%22)&fq=content_type:PARENT",
+            "name": "Cancelation",
+            "id": 5,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "",
+                "searchModel": {
+                    "model": {
+                        "terms": ["\"cancellation\" \"cancel account\" \"cancel\" \"canceled\" \"cancelled\" \"like to cancel\" \"i need to cancel\" \"reason for cancelling\" \"reason cancellation\" \"cancelling\" \" cancel\" \"cancelling account\" \"cancel my\" \"cancel service\" \"need to cancel\""],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 0
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-11T16:42:30.351Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:%5C%22i%5C%20was%5C%20told%5C%22)%20OR%20(text_en:%5C%22they%5C%20told%5C%22)%20OR%20(text_en:%5C%22i%5C%20was%5C%20promised%5C%22)%20OR%20(text_en:%5C%22they%5C%20promised%5C%20me%5C%22)%20OR%20(text_en:promise)%20OR%20(text_en:promised)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:%5C%22i%5C%20was%5C%20told%5C%22)%20OR%20(text_en:%5C%22they%5C%20told%5C%22)%20OR%20(text_en:%5C%22i%5C%20was%5C%20promised%5C%22)%20OR%20(text_en:%5C%22they%5C%20promised%5C%20me%5C%22)%20OR%20(text_en:promise)%20OR%20(text_en:promised)&fq=content_type:PARENT",
+            "name": "Broken Promisses",
+            "id": 7,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "",
+                "searchModel": {
+                    "model": {
+                        "terms": ["\"i was told\" \"they told\" \"i was promised\" \"they promised me\" promise promised"],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 0
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-11T16:42:06.169Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(topics_f:2%5C/Payment%5C%20Methods%5C/transfer)&fq=content_type:PARENT&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(topics_f:2%5C/Payment%5C%20Methods%5C/transfer)",
+            "name": "Transfer",
+            "id": 8,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "using a Topic",
+                "searchModel": {
+                    "model": {
+                        "terms": [],
+                        "filterFields": [{
+                            "groupTag": "",
+                            "values": [{
+                                "valueTitleKey": "transfer",
+                                "value": "2/Payment Methods/transfer"
+                            }],
+                            "dataType": null,
+                            "speaker": "Any",
+                            "name": "topics_f",
+                            "locked": false
+                        }],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 0
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-11T16:35:10.136Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:%5C%22phoned%5C%20back%5C%22)%20OR%20(text_en:%5C%22phoned%5C%22)%20OR%20(text_en:telephoned)%20OR%20(text_en:calling)%20OR%20(text_en:called)%20OR%20(text_en:connected)%20OR%20(text_en:connects)%20OR%20(text_en:connecting)%20OR%20(text_en:representative)%20OR%20(text_en:representatives)%20OR%20(text_en:%5C%22to%5C%20reach%5C%22)%20OR%20(text_en:%5C%22to%5C%20speak%5C%22)%20OR%20(text_en:%5C%22Spoke%5C%20with%5C%22)%20OR%20(text_en:%5C%22Spoke%5C%20with%5C%22)%20OR%20(text_en:%5C%22phoned%5C%20twice%5C%22)%20OR%20(text_en:%5C%22calling%5C%20again%5C%22)%20OR%20(text_en:%5C%22called%5C%20yesterday%5C%22)%20OR%20(text_en:%5C%22called%5C%20a%5C%20week%5C%22)%20OR%20(text_en:%5C%22called%5C%20you%5C%20last%5C%22)%20OR%20(text_en:%5C%22i%5C%20talked%5C%22)%20OR%20(text_en:%5C%22i%5C%20was%5C%20told%5C%22)%20OR%20(text_en:%5C%22talked%5C%20with%5C%20to%5C%20yesterday%5C%22)%20OR%20(text_en:%5C%22called%5C%20the%5C%20other%5C%20day%5C%22)%20OR%20(text_en:%5C%22spoke%5C%20before%5C%22)%20OR%20(text_en:%5C%22called%5C%20before%5C%22)%20OR%20(text_en:%5C%22spoke%5C%20yesterday%5C%22)%20OR%20(text_en:%5C%22called%5C%20last%5C%20week%5C%22)%20OR%20(text_en:%5C%22spoke%5C%20with%5C%22)%20OR%20(text_en:%5C%22called%5C%20back%5C%22)%20OR%20(text_en:%5C%22spoke%5C%20with%5C%22)%20OR%20(text_en:%5C%22talked%5C%20to%5C%22)%20OR%20(text_en:%5C%22second%5C%20time%5C%22)%20OR%20(text_en:%5C%22third%5C%20time%5C%22)%20OR%20(text_en:%5C%22calling%5C%20back%5C%22)%20OR%20(text_en:%5C%22previously%5C%20called%5C%22)%20OR%20(text_en:%5C%22call%5C%20back%5C%22)%20OR%20(text_en:called)%20OR%20(text_en:%5C%22i%5C%20rang%5C%22)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:%5C%22phoned%5C%20back%5C%22)%20OR%20(text_en:%5C%22phoned%5C%22)%20OR%20(text_en:telephoned)%20OR%20(text_en:calling)%20OR%20(text_en:called)%20OR%20(text_en:connected)%20OR%20(text_en:connects)%20OR%20(text_en:connecting)%20OR%20(text_en:representative)%20OR%20(text_en:representatives)%20OR%20(text_en:%5C%22to%5C%20reach%5C%22)%20OR%20(text_en:%5C%22to%5C%20speak%5C%22)%20OR%20(text_en:%5C%22Spoke%5C%20with%5C%22)%20OR%20(text_en:%5C%22Spoke%5C%20with%5C%22)%20OR%20(text_en:%5C%22phoned%5C%20twice%5C%22)%20OR%20(text_en:%5C%22calling%5C%20again%5C%22)%20OR%20(text_en:%5C%22called%5C%20yesterday%5C%22)%20OR%20(text_en:%5C%22called%5C%20a%5C%20week%5C%22)%20OR%20(text_en:%5C%22called%5C%20you%5C%20last%5C%22)%20OR%20(text_en:%5C%22i%5C%20talked%5C%22)%20OR%20(text_en:%5C%22i%5C%20was%5C%20told%5C%22)%20OR%20(text_en:%5C%22talked%5C%20with%5C%20to%5C%20yesterday%5C%22)%20OR%20(text_en:%5C%22called%5C%20the%5C%20other%5C%20day%5C%22)%20OR%20(text_en:%5C%22spoke%5C%20before%5C%22)%20OR%20(text_en:%5C%22called%5C%20before%5C%22)%20OR%20(text_en:%5C%22spoke%5C%20yesterday%5C%22)%20OR%20(text_en:%5C%22called%5C%20last%5C%20week%5C%22)%20OR%20(text_en:%5C%22spoke%5C%20with%5C%22)%20OR%20(text_en:%5C%22called%5C%20back%5C%22)%20OR%20(text_en:%5C%22spoke%5C%20with%5C%22)%20OR%20(text_en:%5C%22talked%5C%20to%5C%22)%20OR%20(text_en:%5C%22second%5C%20time%5C%22)%20OR%20(text_en:%5C%22third%5C%20time%5C%22)%20OR%20(text_en:%5C%22calling%5C%20back%5C%22)%20OR%20(text_en:%5C%22previously%5C%20called%5C%22)%20OR%20(text_en:%5C%22call%5C%20back%5C%22)%20OR%20(text_en:called)%20OR%20(text_en:%5C%22i%5C%20rang%5C%22)&fq=content_type:PARENT",
+            "name": "Repeat Calls",
+            "id": 9,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "",
+                "searchModel": {
+                    "model": {
+                        "terms": ["\"phoned back\" \"phoned\"  telephoned calling  called connected connects connecting representative representatives \"to reach\" \"to speak\" \"Spoke with\" \"Spoke with\" \"phoned twice\" \"calling again\" \"called yesterday\" \"called a week\" \"called you last\" \"i talked\" \"i was told\" \"talked with to yesterday\" \"called the other day\" \"spoke before\" \"called before\" \"spoke yesterday\" \"called last week\" \"spoke with\" \"called back\" \"spoke with\" \"talked to\" \"second time\" \"third time\" \"calling back\" \"previously called\" \"call back\" called \"i rang\""],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 0
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-11T16:41:40.170Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:statement)%20OR%20(text_en:bill)%20OR%20(text_en:invoice)%20OR%20(text_en:charge)%20OR%20(text_en:balance)%20OR%20(text_en:%5C%22billing%5C%20cycle%5C%22)%20OR%20(text_en:billing)%20OR%20(text_en:get)%20OR%20(text_en:%5C%22full%5C%20amount%5C%22)%20OR%20(text_en:%5C%22i%5C%20paid%5C%22)%20OR%20(text_en:%5C%22issue%5C%20bill%5C%22)%20OR%20(text_en:%5C%22incorrect%5C%20bill%5C%22)%20OR%20(text_en:%5C%22problem%5C%20with%5C%20bill%5C%22)%20OR%20(text_en:%5C%22query%5C%20bill%5C%22)%20OR%20(text_en:%5C%22just%5C%20received%5C%20bill%5C%22)%20OR%20(text_en:%5C%22got%5C%20bill%5C%22)%20OR%20(text_en:increase)%20OR%20(text_en:paper)%20OR%20(text_en:%5C%22billing%5C%20department%5C%22)%20OR%20(text_en:%E2%80%9Cpayment)%20OR%20(text_en:charged%E2%80%9D)%20OR%20(text_en:%5C%22my%5C%20bill%5C%22)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:statement)%20OR%20(text_en:bill)%20OR%20(text_en:invoice)%20OR%20(text_en:charge)%20OR%20(text_en:balance)%20OR%20(text_en:%5C%22billing%5C%20cycle%5C%22)%20OR%20(text_en:billing)%20OR%20(text_en:get)%20OR%20(text_en:%5C%22full%5C%20amount%5C%22)%20OR%20(text_en:%5C%22i%5C%20paid%5C%22)%20OR%20(text_en:%5C%22issue%5C%20bill%5C%22)%20OR%20(text_en:%5C%22incorrect%5C%20bill%5C%22)%20OR%20(text_en:%5C%22problem%5C%20with%5C%20bill%5C%22)%20OR%20(text_en:%5C%22query%5C%20bill%5C%22)%20OR%20(text_en:%5C%22just%5C%20received%5C%20bill%5C%22)%20OR%20(text_en:%5C%22got%5C%20bill%5C%22)%20OR%20(text_en:increase)%20OR%20(text_en:paper)%20OR%20(text_en:%5C%22billing%5C%20department%5C%22)%20OR%20(text_en:%E2%80%9Cpayment)%20OR%20(text_en:charged%E2%80%9D)%20OR%20(text_en:%5C%22my%5C%20bill%5C%22)&fq=content_type:PARENT",
+            "name": "Billing Issues",
+            "id": 10,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "",
+                "searchModel": {
+                    "model": {
+                        "terms": ["statement bill invoice charge balance \"billing cycle\" billing get \"full amount\" \"i paid\" \"issue bill\" \"incorrect bill\" \"problem with bill\" \"query bill\" \"just received bill\" \"got bill\" increase paper \"billing department\" \u201cpayment charged\u201d \"my bill\""],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 0
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-11T16:37:17.137Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:%5C%22VAT%5C%20invoice%5C%22)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:%5C%22VAT%5C%20invoice%5C%22)&fq=content_type:PARENT",
+            "name": "VAT Invoice",
+            "id": 13,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "Chris: Noticed a lot of these discussions so creating a category for it.",
+                "searchModel": {
+                    "model": {
+                        "terms": ["\"VAT invoice\""],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 0
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-11T16:41:10.196Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:active)%20OR%20(text_en:activate)%20OR%20(text_en:activated)%20OR%20(text_en:activating)%20OR%20(text_en:activation)%20OR%20(text_en:enable)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:active)%20OR%20(text_en:activate)%20OR%20(text_en:activated)%20OR%20(text_en:activating)%20OR%20(text_en:activation)%20OR%20(text_en:enable)&fq=content_type:PARENT",
+            "name": "Activation",
+            "id": 15,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "",
+                "searchModel": {
+                    "model": {
+                        "terms": ["active activate activated activating activation enable"],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 0
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-11T16:40:41.348Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:bar)%20OR%20(text_en:barring)%20OR%20(text_en:barred)%20OR%20(text_en:bar)%20OR%20(text_en:%5C%22BAR'S%5C%22)%20OR%20(text_en:Barred)%20OR%20(text_en:baring)%20OR%20(text_en:bars)%20OR%20(text_en:blocked)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:bar)%20OR%20(text_en:barring)%20OR%20(text_en:barred)%20OR%20(text_en:bar)%20OR%20(text_en:%5C%22BAR'S%5C%22)%20OR%20(text_en:Barred)%20OR%20(text_en:baring)%20OR%20(text_en:bars)%20OR%20(text_en:blocked)&fq=content_type:PARENT",
+            "name": "Barring/ Locked Phones",
+            "id": 16,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "",
+                "searchModel": {
+                    "model": {
+                        "terms": ["bar barring barred bar \"BAR'S\" Barred baring bars blocked"],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 0
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-11T16:40:03.904Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(topics_f:1%5C/Phones)%20OR%20(relations_f:1%5C/Transfer%5C-%3EDepartment)&fq=content_type:PARENT&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(topics_f:1%5C/Phones)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(relations_f:1%5C/Transfer%5C-%3EDepartment)",
+            "name": "Transfer Issues",
+            "id": 17,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "2016-01-11T14:42:17.574Z",
+                "isPublished": true,
+                "impact": 2,
+                "description": "Created by Nir",
+                "searchModel": {
+                    "model": {
+                        "terms": [],
+                        "filterFields": [
+                            {
+                                "groupTag": "",
+                                "values": [{
+                                    "valueTitleKey": "Phones",
+                                    "value": "1/Phones"
+                                }],
+                                "dataType": null,
+                                "speaker": "Any",
+                                "name": "topics_f",
+                                "locked": false
+                            },
+                            {
+                                "groupTag": "",
+                                "values": [{
+                                    "valueTitleKey": "Transfer->Department",
+                                    "value": "1/Transfer->Department"
+                                }],
+                                "dataType": null,
+                                "speaker": "Any",
+                                "name": "relations_f",
+                                "locked": false
+                            }
+                        ],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 0
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-12T08:42:05.430Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:%5C%22lose%5C%20my%5C%20business%5C%22)%20OR%20(text_en:%5C%22losing%5C%20my%5C%20business%5C%22)%20OR%20(text_en:%5C%22lost%5C%20my%5C%20business%5C%22)%20OR%20(text_en:%5C%22retain%5C%20my%5C%20business%5C%22)%20OR%20(text_en:%5C%22retain%5C%20me%5C%22)%20OR%20(text_en:%5C%22looking%5C%20elsewhere%5C%22)%20OR%20(text_en:%5C%22explore%5C%20other%5C%20options%5C%22)%20OR%20(text_en:%5C%22exploring%5C%20other%5C%20options%5C%22)%20OR%20(text_en:%5C%22better%5C%20deal%5C%20for%5C%20less%5C%22)%20OR%20(text_en:%5C%22thinking%5C%20of%5C%20leaving%5C%22)%20OR%20(text_en:%5C%22consider%5C%20cheaper%5C%20Deal%5C%22)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:%5C%22lose%5C%20my%5C%20business%5C%22)%20OR%20(text_en:%5C%22losing%5C%20my%5C%20business%5C%22)%20OR%20(text_en:%5C%22lost%5C%20my%5C%20business%5C%22)%20OR%20(text_en:%5C%22retain%5C%20my%5C%20business%5C%22)%20OR%20(text_en:%5C%22retain%5C%20me%5C%22)%20OR%20(text_en:%5C%22looking%5C%20elsewhere%5C%22)%20OR%20(text_en:%5C%22explore%5C%20other%5C%20options%5C%22)%20OR%20(text_en:%5C%22exploring%5C%20other%5C%20options%5C%22)%20OR%20(text_en:%5C%22better%5C%20deal%5C%20for%5C%20less%5C%22)%20OR%20(text_en:%5C%22thinking%5C%20of%5C%20leaving%5C%22)%20OR%20(text_en:%5C%22consider%5C%20cheaper%5C%20Deal%5C%22)&fq=content_type:PARENT",
+            "name": "Churn",
+            "id": 18,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "Keith and Dorit (Telco)",
+                "searchModel": {
+                    "model": {
+                        "terms": ["\"lose my business\" \"losing my business\" \"lost my business\"  \"retain my business\" \"retain me\" \"looking elsewhere\" \"explore other options\" \"exploring other options\" \"better deal for less\" \"thinking of leaving\" \"consider cheaper Deal\" "],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 3
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-11T16:37:52.943Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:internet)%20OR%20(text_en:speed)%20OR%20(text_en:service)%20OR%20(text_en:slow)%20OR%20(text_en:fast)%20OR%20(text_en:slower)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:internet)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:speed)%20OR%20(text_en:service)%20OR%20(text_en:slow)%20OR%20(text_en:fast)%20OR%20(text_en:slower)&fq=content_type:PARENT",
+            "name": "Internet Speed",
+            "id": 19,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "By Yariv",
+                "searchModel": {
+                    "model": {
+                        "terms": [
+                            "internet",
+                            "speed service slow fast slower"
+                        ],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 0
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-11T16:37:35.402Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:%5C%22account%5C%20for%5C%20disconnection%5C%22)%20OR%20(text_en:%5C%22cancellation%5C%22)%20OR%20(text_en:%5C%22cancelation%5C%22)%20OR%20(text_en:%5C%22cancel%5C%20my%5C%20contract%5C%22)%20OR%20(text_en:%5C%22cancel%5C%20my%5C%20account%5C%22)%20OR%20(text_en:%5C%22notice%5C%20to%5C%20cancel%5C%22)%20OR%20(text_en:%5C%22canceled%5C%22)%20OR%20(text_en:%5C%22cancelled%5C%22)%20OR%20(text_en:%5C%22like%5C%20to%5C%20cancel%5C%22)%20OR%20(text_en:%5C%22need%5C%20to%5C%20cancel%5C%22)%20OR%20(text_en:%5C%22cancel%5C%20my%5C%22)%20OR%20(text_en:%5C%22cancel%5C%20service%5C%22)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:%5C%22account%5C%20for%5C%20disconnection%5C%22)%20OR%20(text_en:%5C%22cancellation%5C%22)%20OR%20(text_en:%5C%22cancelation%5C%22)%20OR%20(text_en:%5C%22cancel%5C%20my%5C%20contract%5C%22)%20OR%20(text_en:%5C%22cancel%5C%20my%5C%20account%5C%22)%20OR%20(text_en:%5C%22notice%5C%20to%5C%20cancel%5C%22)%20OR%20(text_en:%5C%22canceled%5C%22)%20OR%20(text_en:%5C%22cancelled%5C%22)%20OR%20(text_en:%5C%22like%5C%20to%5C%20cancel%5C%22)%20OR%20(text_en:%5C%22need%5C%20to%5C%20cancel%5C%22)%20OR%20(text_en:%5C%22cancel%5C%20my%5C%22)%20OR%20(text_en:%5C%22cancel%5C%20service%5C%22)&fq=content_type:PARENT",
+            "name": "New  Cancelation",
+            "id": 21,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "Chris: My version as a modification of the original",
+                "searchModel": {
+                    "model": {
+                        "terms": ["\"account for disconnection\" \"cancellation\" \"cancelation\" \"cancel my contract\" \"cancel my account\" \"notice to cancel\" \"canceled\" \"cancelled\" \"like to cancel\" \"need to cancel\" \"cancel my\" \"cancel service\""],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 0
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-11T16:39:07.995Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:%5C%22phone%5C%20drop%5C%22)%20OR%20(text_en:%5C%22phone%5C%20dropped%5C%22)%20OR%20(text_en:%5C%22phone%5C%20fuzzy%5C%22)%20OR%20(text_en:%5C%22phone%5C%20sound%5C%22)%20OR%20(text_en:%5C%22phone%5C%20static%5C%22)%20OR%20(text_en:%5C%22phone%5C%20clarity%5C%22)%20OR%20(text_en:%5C%22line%5C%20drop%5C%22)%20OR%20(text_en:%5C%22line%5C%20dropped%5C%22)%20OR%20(text_en:%5C%22line%5C%20static%5C%22)%20OR%20(text_en:%5C%22line%5C%20clarity%5C%22)%20OR%20(text_en:%5C%22line%5C%20clear%5C%22)%20OR%20(text_en:%5C%22line%5C%20quality%5C%22)%20OR%20(text_en:%5C%22line%5C%20fail%5C%22)%20OR%20(text_en:%5C%22call%5C%20drop%5C%22)%20OR%20(text_en:%5C%22call%5C%20static%5C%22)%20OR%20(text_en:%5C%22call%5C%20clarity%5C%22)%20OR%20(text_en:%5C%22call%5C%20clear%5C%22)%20OR%20(text_en:%5C%22call%5C%20quality%5C%22)%20OR%20(text_en:%5C%22call%5C%20fail%5C%22)%20OR%20(text_en:%5C%22calls%5C%20drop%5C%22)%20OR%20(text_en:%5C%22calls%5C%20dropped%5C%22)%20OR%20(text_en:%5C%22calls%5C%20static%5C%22)%20OR%20(text_en:%5C%22calls%5C%20clarity%5C%22)%20OR%20(text_en:%5C%22calls%5C%20clear%5C%22)%20OR%20(text_en:%5C%22calls%5C%20quality%5C%22)%20OR%20(text_en:%5C%22calls%5C%20fail%5C%22)%20OR%20(text_en:%5C%22hard%5C%20to%5C%20hear%5C%22)%20OR%20(text_en:%5C%22difficult%5C%20to%5C%20hear%5C%22)%20OR%20(text_en:%5C%22sound%5C%20quality%5C%22)%20OR%20(text_en:%5C%22poor%5C%20quality%5C%22)%20OR%20(text_en:%5C%22can%E2%80%99t%5C%20hear%5C%22)%20OR%20(text_en:%5C%22dropped%5C%20call%5C%22)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:%5C%22phone%5C%20drop%5C%22)%20OR%20(text_en:%5C%22phone%5C%20dropped%5C%22)%20OR%20(text_en:%5C%22phone%5C%20fuzzy%5C%22)%20OR%20(text_en:%5C%22phone%5C%20sound%5C%22)%20OR%20(text_en:%5C%22phone%5C%20static%5C%22)%20OR%20(text_en:%5C%22phone%5C%20clarity%5C%22)%20OR%20(text_en:%5C%22line%5C%20drop%5C%22)%20OR%20(text_en:%5C%22line%5C%20dropped%5C%22)%20OR%20(text_en:%5C%22line%5C%20static%5C%22)%20OR%20(text_en:%5C%22line%5C%20clarity%5C%22)%20OR%20(text_en:%5C%22line%5C%20clear%5C%22)%20OR%20(text_en:%5C%22line%5C%20quality%5C%22)%20OR%20(text_en:%5C%22line%5C%20fail%5C%22)%20OR%20(text_en:%5C%22call%5C%20drop%5C%22)%20OR%20(text_en:%5C%22call%5C%20static%5C%22)%20OR%20(text_en:%5C%22call%5C%20clarity%5C%22)%20OR%20(text_en:%5C%22call%5C%20clear%5C%22)%20OR%20(text_en:%5C%22call%5C%20quality%5C%22)%20OR%20(text_en:%5C%22call%5C%20fail%5C%22)%20OR%20(text_en:%5C%22calls%5C%20drop%5C%22)%20OR%20(text_en:%5C%22calls%5C%20dropped%5C%22)%20OR%20(text_en:%5C%22calls%5C%20static%5C%22)%20OR%20(text_en:%5C%22calls%5C%20clarity%5C%22)%20OR%20(text_en:%5C%22calls%5C%20clear%5C%22)%20OR%20(text_en:%5C%22calls%5C%20quality%5C%22)%20OR%20(text_en:%5C%22calls%5C%20fail%5C%22)%20OR%20(text_en:%5C%22hard%5C%20to%5C%20hear%5C%22)%20OR%20(text_en:%5C%22difficult%5C%20to%5C%20hear%5C%22)%20OR%20(text_en:%5C%22sound%5C%20quality%5C%22)%20OR%20(text_en:%5C%22poor%5C%20quality%5C%22)%20OR%20(text_en:%5C%22can%E2%80%99t%5C%20hear%5C%22)%20OR%20(text_en:%5C%22dropped%5C%20call%5C%22)&fq=content_type:PARENT",
+            "name": "Dropped Calls",
+            "id": 23,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "",
+                "searchModel": {
+                    "model": {
+                        "terms": ["\"phone drop\" \"phone dropped\" \"phone fuzzy\" \"phone sound\" \"phone static\" \"phone clarity\" \"line drop\" \"line dropped\" \"line static\" \"line clarity\" \"line clear\" \"line quality\" \"line fail\" \"call drop\" \"call static\" \"call clarity\" \"call clear\" \"call quality\" \"call fail\" \"calls drop\" \"calls dropped\" \"calls static\" \"calls clarity\" \"calls clear\" \"calls quality\" \"calls fail\" \"hard to hear\"  \"difficult to hear\" \"sound quality\" \"poor quality\" \"can\u2019t hear\" \"dropped call\""],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 0
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-11T16:38:51.514Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:insurance)%20OR%20(text_en:insurace)%20OR%20(text_en:insured)%20OR%20(text_en:insure)%20OR%20(text_en:insurers)%20OR%20(text_en:insurence)%20OR%20(text_en:insurents)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:insurance)%20OR%20(text_en:insurace)%20OR%20(text_en:insured)%20OR%20(text_en:insure)%20OR%20(text_en:insurers)%20OR%20(text_en:insurence)%20OR%20(text_en:insurents)&fq=content_type:PARENT",
+            "name": "Insurance",
+            "id": 26,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "Roni",
+                "searchModel": {
+                    "model": {
+                        "terms": ["insurance insurace insured insure insurers insurence insurents"],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 0
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-11T16:34:17.807Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:%5C%22go%5C%20ahead%5C%22)%20OR%20(text_en:%5C%22want%5C%20to%5C%20upgrade%5C%22)%20OR%20(text_en:%5C%22want%5C%20to%5C%20buy%5C%22)%20OR%20(text_en:%5C%22want%5C%20to%5C%20order%5C%22)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:%5C%22go%5C%20ahead%5C%22)%20OR%20(text_en:%5C%22want%5C%20to%5C%20upgrade%5C%22)%20OR%20(text_en:%5C%22want%5C%20to%5C%20buy%5C%22)%20OR%20(text_en:%5C%22want%5C%20to%5C%20order%5C%22)&fq=content_type:PARENT",
+            "name": "Successful Sale",
+            "id": 29,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "Roni",
+                "searchModel": {
+                    "model": {
+                        "terms": ["\"go ahead\" \"want to upgrade\" \"want to buy\" \"want to order\""],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 0
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-11T16:34:34.557Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(relations_f:2%5C/Change%5C-%3ELegal%5C%20Terms%5C/upgrade%5C-%3Econtract%20OR%20relations_f:2%5C/Change%5C-%3ELegal%5C%20Terms%5C/change%5C-%3Econtract%20OR%20relations_f:2%5C/Change%5C-%3EPolicy%5C/change%5C-%3Econtract%20OR%20relations_f:2%5C/Change%5C-%3EPrograms%5C/change%5C-%3Eprogram)&fq=content_type:PARENT&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(relations_f:2%5C/Change%5C-%3ELegal%5C%20Terms%5C/upgrade%5C-%3Econtract%20OR%20relations_f:2%5C/Change%5C-%3ELegal%5C%20Terms%5C/change%5C-%3Econtract%20OR%20relations_f:2%5C/Change%5C-%3EPolicy%5C/change%5C-%3Econtract%20OR%20relations_f:2%5C/Change%5C-%3EPrograms%5C/change%5C-%3Eprogram)",
+            "name": "Change Contract",
+            "id": 32,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "Roni",
+                "searchModel": {
+                    "model": {
+                        "terms": [],
+                        "filterFields": [{
+                            "groupTag": "",
+                            "values": [
+                                {
+                                    "valueTitleKey": "upgrade->contract",
+                                    "value": "2/Change->Legal Terms/upgrade->contract"
+                                },
+                                {
+                                    "valueTitleKey": "change->contract",
+                                    "value": "2/Change->Legal Terms/change->contract"
+                                },
+                                {
+                                    "valueTitleKey": "change->contract",
+                                    "value": "2/Change->Policy/change->contract"
+                                },
+                                {
+                                    "valueTitleKey": "change->program",
+                                    "value": "2/Change->Programs/change->program"
+                                }
+                            ],
+                            "dataType": null,
+                            "speaker": "Any",
+                            "name": "relations_f",
+                            "locked": false
+                        }],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 0
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-11T16:54:17.891Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:upgrade)%20OR%20(text_en:upgraded)%20OR%20(text_en:upgrading)%20OR%20(text_en:upgrades)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:upgrade)%20OR%20(text_en:upgraded)%20OR%20(text_en:upgrading)%20OR%20(text_en:upgrades)&fq=content_type:PARENT",
+            "name": "Upgrade",
+            "id": 36,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "",
+                "searchModel": {
+                    "model": {
+                        "terms": ["upgrade upgraded upgrading upgrades "],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": -8001
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-11T16:57:17.542Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:warranty)%20OR%20(text_en:warrant)%20OR%20(text_en:warranted)%20OR%20(text_en:warranties)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:warranty)%20OR%20(text_en:warrant)%20OR%20(text_en:warranted)%20OR%20(text_en:warranties)&fq=content_type:PARENT",
+            "name": "Warranty",
+            "id": 37,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "",
+                "searchModel": {
+                    "model": {
+                        "terms": ["warranty warrant warranted warranties"],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": -8001
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-12T08:07:38.613Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:%5C%226%5C%20months%5C%22%20AND%20speaker_type:agent)%20OR%20(text_en:%5C%22per%5C%20month%5C%22%20AND%20speaker_type:agent)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:%5C%226%5C%20months%5C%22%20AND%20speaker_type:agent)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:%5C%22per%5C%20month%5C%22%20AND%20speaker_type:agent)&fq=content_type:PARENT",
+            "name": "Exp - 6 Month Price",
+            "id": 38,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "Expired offer with 6 month prices being quoted.",
+                "searchModel": {
+                    "model": {
+                        "terms": [
+                            "a:\"6 months\"",
+                            "a:\"per month\""
+                        ],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 1
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-12T08:28:18.210Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:payment)%20OR%20(text_en:%5C%22please%5C%20call%5C%22)%20OR%20(text_en:%5C%22please%5C%20contact%5C%22)%20OR%20(text_en:%5C%22call%5C%20us%5C%22)%20OR%20(text_en:%5C%22contact%5C%20us%5C%20back%5C%22)%20OR%20(text_en:%5C%22contact%5C%20us%5C%20again%5C%22)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:payment)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:%5C%22please%5C%20call%5C%22)%20OR%20(text_en:%5C%22please%5C%20contact%5C%22)%20OR%20(text_en:%5C%22call%5C%20us%5C%22)%20OR%20(text_en:%5C%22contact%5C%20us%5C%20back%5C%22)%20OR%20(text_en:%5C%22contact%5C%20us%5C%20again%5C%22)&fq=content_type:PARENT",
+            "name": "Redirected - Payments",
+            "id": 39,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "",
+                "searchModel": {
+                    "model": {
+                        "terms": [
+                            "payment",
+                            "\"please call\" \"please contact\" \"call us\" \"contact us back\" \"contact us again\""
+                        ],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 2
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-12T08:11:22.233Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:Support)%20OR%20(text_en:%5C%22customer%5C%20support%5C%22)%20OR%20(text_en:activate)%20OR%20(text_en:%5C%22customer%5C%20service%5C%22)%20OR%20(text_en:%5C%22please%5C%20call%5C%22)%20OR%20(text_en:%5C%22please%5C%20contact%5C%22)%20OR%20(text_en:%5C%22call%5C%20us%5C%22)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:Support)%20OR%20(text_en:%5C%22customer%5C%20support%5C%22)%20OR%20(text_en:activate)%20OR%20(text_en:%5C%22customer%5C%20service%5C%22)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:%5C%22please%5C%20call%5C%22)%20OR%20(text_en:%5C%22please%5C%20contact%5C%22)%20OR%20(text_en:%5C%22call%5C%20us%5C%22)&fq=content_type:PARENT",
+            "name": "Redirected - Support",
+            "id": 40,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "",
+                "searchModel": {
+                    "model": {
+                        "terms": [
+                            "Support \"customer support\" activate \"customer service\"",
+                            "\"please call\" \"please contact\" \"call us\""
+                        ],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 2
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-12T08:15:27.839Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:upgrade)%20OR%20(text_en:upgraded)%20OR%20(text_en:upgrades)%20OR%20(text_en:upgrading)%20OR%20(text_en:%5C%22please%5C%20call%5C%22)%20OR%20(text_en:%5C%22please%5C%20contact%5C%22)%20OR%20(text_en:%5C%22call%5C%20us%5C%22)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:upgrade)%20OR%20(text_en:upgraded)%20OR%20(text_en:upgrades)%20OR%20(text_en:upgrading)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:%5C%22please%5C%20call%5C%22)%20OR%20(text_en:%5C%22please%5C%20contact%5C%22)%20OR%20(text_en:%5C%22call%5C%20us%5C%22)&fq=content_type:PARENT",
+            "name": "Redirected - Upgrade",
+            "id": 41,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "",
+                "searchModel": {
+                    "model": {
+                        "terms": [
+                            "upgrade upgraded upgrades upgrading",
+                            "\"please call\" \"please contact\" \"call us\""
+                        ],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 2
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-12T08:16:58.970Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:bar)%20OR%20(text_en:barring)%20OR%20(text_en:barred)%20OR%20(text_en:BAR)%20OR%20(text_en:%5C%22BAR'S%5C%22)%20OR%20(text_en:BARRED)%20OR%20(text_en:BARRING)%20OR%20(text_en:BARS)%20OR%20(text_en:%5C%22please%5C%20call%5C%22)%20OR%20(text_en:%5C%22please%5C%20contact%5C%22)%20OR%20(text_en:%5C%22call%5C%20us%5C%22)%20OR%20(text_en:%5C%22contact%5C%20us%5C%20back%5C%22)%20OR%20(text_en:%5C%22contact%5C%20us%5C%20again%5C%22)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:bar)%20OR%20(text_en:barring)%20OR%20(text_en:barred)%20OR%20(text_en:BAR)%20OR%20(text_en:%5C%22BAR'S%5C%22)%20OR%20(text_en:BARRED)%20OR%20(text_en:BARRING)%20OR%20(text_en:BARS)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:%5C%22please%5C%20call%5C%22)%20OR%20(text_en:%5C%22please%5C%20contact%5C%22)%20OR%20(text_en:%5C%22call%5C%20us%5C%22)%20OR%20(text_en:%5C%22contact%5C%20us%5C%20back%5C%22)%20OR%20(text_en:%5C%22contact%5C%20us%5C%20again%5C%22)&fq=content_type:PARENT",
+            "name": "Redirected - Barring",
+            "id": 42,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "",
+                "searchModel": {
+                    "model": {
+                        "terms": [
+                            "bar barring barred BAR \"BAR'S\" BARRED BARRING BARS",
+                            "\"please call\" \"please contact\" \"call us\" \"contact us back\" \"contact us again\""
+                        ],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 2
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-12T08:22:21.853Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:cancel)%20OR%20(text_en:%5C%22CANCELLATION%5C%20Team%5C%22)%20OR%20(text_en:%5C%22CANCELLATIONS%5C%20Team%5C%22)%20OR%20(text_en:%5C%22retention%5C%20team%5C%22)%20OR%20(text_en:%5C%22please%5C%20call%5C%22)%20OR%20(text_en:%5C%22please%5C%20contact%5C%22)%20OR%20(text_en:%5C%22call%5C%20us%5C%22)%20OR%20(text_en:%5C%22contact%5C%20us%5C%20back%5C%22)%20OR%20(text_en:%5C%22contact%5C%20us%5C%20again%5C%22)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:cancel)%20OR%20(text_en:%5C%22CANCELLATION%5C%20Team%5C%22)%20OR%20(text_en:%5C%22CANCELLATIONS%5C%20Team%5C%22)%20OR%20(text_en:%5C%22retention%5C%20team%5C%22)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:%5C%22please%5C%20call%5C%22)%20OR%20(text_en:%5C%22please%5C%20contact%5C%22)%20OR%20(text_en:%5C%22call%5C%20us%5C%22)%20OR%20(text_en:%5C%22contact%5C%20us%5C%20back%5C%22)%20OR%20(text_en:%5C%22contact%5C%20us%5C%20again%5C%22)&fq=content_type:PARENT",
+            "name": "Redirected - Cancel",
+            "id": 43,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "",
+                "searchModel": {
+                    "model": {
+                        "terms": [
+                            "cancel \"CANCELLATION Team\" \"CANCELLATIONS Team\" \"retention team\"",
+                            "\"please call\" \"please contact\" \"call us\" \"contact us back\" \"contact us again\""
+                        ],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 2
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-12T08:25:12.496Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:insurance)%20OR%20(text_en:insured)%20OR%20(text_en:%5C%22please%5C%20call%5C%22)%20OR%20(text_en:%5C%22please%5C%20contact%5C%22)%20OR%20(text_en:%5C%22call%5C%20us%5C%22)%20OR%20(text_en:%5C%22contact%5C%20us%5C%20back%5C%22)%20OR%20(text_en:%5C%22contact%5C%20us%5C%20again%5C%22)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:insurance)%20OR%20(text_en:insured)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:%5C%22please%5C%20call%5C%22)%20OR%20(text_en:%5C%22please%5C%20contact%5C%22)%20OR%20(text_en:%5C%22call%5C%20us%5C%22)%20OR%20(text_en:%5C%22contact%5C%20us%5C%20back%5C%22)%20OR%20(text_en:%5C%22contact%5C%20us%5C%20again%5C%22)&fq=content_type:PARENT",
+            "name": "Redirected - Insurance",
+            "id": 44,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "",
+                "searchModel": {
+                    "model": {
+                        "terms": [
+                            "insurance insured",
+                            "\"please call\" \"please contact\" \"call us\" \"contact us back\" \"contact us again\""
+                        ],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 2
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-12T08:27:55.644Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:%5C%22free%5C%20for%5C%202GB%5C%22)%20OR%20(text_en:%5C%22unlimited%5C%20broadband%5C%22)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:%5C%22free%5C%20for%5C%202GB%5C%22)%20OR%20(text_en:%5C%22unlimited%5C%20broadband%5C%22)&fq=content_type:PARENT",
+            "name": "Exp - Unlimited Broadband",
+            "id": 45,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "Expire offer around unlimited broadband",
+                "searchModel": {
+                    "model": {
+                        "terms": ["\"free for 2GB\" \"unlimited broadband\""],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 1
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-12T08:38:48.294Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:promised%20AND%20speaker_type:customer)%20OR%20(text_en:never%20AND%20speaker_type:customer)%20OR%20(text_en:%5C%22meant%5C%20to%5C%22%20AND%20speaker_type:customer)%20OR%20(text_en:supposed%20AND%20speaker_type:customer)%20OR%20(text_en:%5C%22going%5C%20to%5C%22%20AND%20speaker_type:customer)%20OR%20(text_en:%5C%22call%5C%20me%5C%20back%5C%22%20AND%20speaker_type:customer)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:promised%20AND%20speaker_type:customer)%20OR%20(text_en:never%20AND%20speaker_type:customer)%20OR%20(text_en:%5C%22meant%5C%20to%5C%22%20AND%20speaker_type:customer)%20OR%20(text_en:supposed%20AND%20speaker_type:customer)%20OR%20(text_en:%5C%22going%5C%20to%5C%22%20AND%20speaker_type:customer)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:%5C%22call%5C%20me%5C%20back%5C%22%20AND%20speaker_type:customer)&fq=content_type:PARENT",
+            "name": "Service - No call back",
+            "id": 47,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "Customers did not receive a call back",
+                "searchModel": {
+                    "model": {
+                        "terms": [
+                            "c:promised c:never c:\"meant to\" c:supposed c:\"going to\"",
+                            "c:\"call me back\""
+                        ],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 1
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-12T08:41:06.188Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:%5C%22promised%5C%22%20AND%20speaker_type:customer)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:%5C%22promised%5C%22%20AND%20speaker_type:customer)&fq=content_type:PARENT",
+            "name": "Service - Broken promise",
+            "id": 48,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "Indications that a promise was broken\n",
+                "searchModel": {
+                    "model": {
+                        "terms": ["c:\"promised\""],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 1
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-12T08:43:05.227Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:resolved%20AND%20speaker_type:customer)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:resolved%20AND%20speaker_type:customer)&fq=content_type:PARENT",
+            "name": "Service - Unresolved issue",
+            "id": 49,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "Indications of an issue being unresolved.",
+                "searchModel": {
+                    "model": {
+                        "terms": ["c:resolved"],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 1
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-12T09:10:37.181Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:%5C%22lose%5C%20my%5C%20business%5C%22)%20OR%20(text_en:%5C%22losing%5C%20my%5C%20business%5C%22)%20OR%20(text_en:%5C%22lost%5C%20my%5C%20business%5C%22)%20OR%20(text_en:%5C%22retain%5C%20my%5C%20business%5C%22)%20OR%20(text_en:%5C%22retain%5C%20me%5C%22)%20OR%20(text_en:%5C%22looking%5C%20elsewhere%5C%22)%20OR%20(text_en:%5C%22explore%5C%20other%5C%20options%5C%22)%20OR%20(text_en:%5C%22exploring%5C%20other%5C%20options%5C%22)%20OR%20(text_en:%5C%22better%5C%20deal%5C%20for%5C%20less%5C%22)%20OR%20(text_en:%5C%22thinking%5C%20of%5C%20leaving%5C%22)%20OR%20(text_en:%5C%22consider%5C%20cheaper%5C%20Deal%5C%22)%20OR%20(text_en:cancel)%20OR%20(text_en:phone)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:%5C%22lose%5C%20my%5C%20business%5C%22)%20OR%20(text_en:%5C%22losing%5C%20my%5C%20business%5C%22)%20OR%20(text_en:%5C%22lost%5C%20my%5C%20business%5C%22)%20OR%20(text_en:%5C%22retain%5C%20my%5C%20business%5C%22)%20OR%20(text_en:%5C%22retain%5C%20me%5C%22)%20OR%20(text_en:%5C%22looking%5C%20elsewhere%5C%22)%20OR%20(text_en:%5C%22explore%5C%20other%5C%20options%5C%22)%20OR%20(text_en:%5C%22exploring%5C%20other%5C%20options%5C%22)%20OR%20(text_en:%5C%22better%5C%20deal%5C%20for%5C%20less%5C%22)%20OR%20(text_en:%5C%22thinking%5C%20of%5C%20leaving%5C%22)%20OR%20(text_en:%5C%22consider%5C%20cheaper%5C%20Deal%5C%22)%20OR%20(text_en:cancel)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:phone)&fq=content_type:PARENT",
+            "name": "Churn - New Phone",
+            "id": 50,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "",
+                "searchModel": {
+                    "model": {
+                        "terms": [
+                            "\"lose my business\" \"losing my business\" \"lost my business\"  \"retain my business\" \"retain me\" \"looking elsewhere\" \"explore other options\" \"exploring other options\" \"better deal for less\" \"thinking of leaving\" \"consider cheaper Deal\" cancel",
+                            "phone"
+                        ],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 3
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-12T08:50:50.290Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:%5C%22tried%5C%20to%5C%20contact%5C%22%20AND%20speaker_type:customer)%20OR%20(text_en:%5C%22could%5C%20not%5C%20contact%5C%22%20AND%20speaker_type:customer)%20OR%20(text_en:%5C%22get%5C%20through%5C%20to%5C%20you%5C%22%20AND%20speaker_type:customer)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:%5C%22tried%5C%20to%5C%20contact%5C%22%20AND%20speaker_type:customer)%20OR%20(text_en:%5C%22could%5C%20not%5C%20contact%5C%22%20AND%20speaker_type:customer)%20OR%20(text_en:%5C%22get%5C%20through%5C%20to%5C%20you%5C%22%20AND%20speaker_type:customer)&fq=content_type:PARENT",
+            "name": "Service - Unable to contact",
+            "id": 51,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "Customer reports they've tried to contact someone.",
+                "searchModel": {
+                    "model": {
+                        "terms": ["c:\"tried to contact\" c:\"could not contact\" c:\"get through to you\""],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 1
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-12T09:00:07.497Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:%5C%22lose%5C%20my%5C%20business%5C%22)%20OR%20(text_en:%5C%22losing%5C%20my%5C%20business%5C%22)%20OR%20(text_en:%5C%22lost%5C%20my%5C%20business%5C%22)%20OR%20(text_en:%5C%22retain%5C%20my%5C%20business%5C%22)%20OR%20(text_en:%5C%22retain%5C%20me%5C%22)%20OR%20(text_en:%5C%22looking%5C%20elsewhere%5C%22)%20OR%20(text_en:%5C%22explore%5C%20other%5C%20options%5C%22)%20OR%20(text_en:%5C%22exploring%5C%20other%5C%20options%5C%22)%20OR%20(text_en:%5C%22better%5C%20deal%5C%20for%5C%20less%5C%22)%20OR%20(text_en:%5C%22thinking%5C%20of%5C%20leaving%5C%22)%20OR%20(text_en:%5C%22consider%5C%20cheaper%5C%20Deal%5C%22)%20OR%20(text_en:cancel)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:%5C%22lose%5C%20my%5C%20business%5C%22)%20OR%20(text_en:%5C%22losing%5C%20my%5C%20business%5C%22)%20OR%20(text_en:%5C%22lost%5C%20my%5C%20business%5C%22)%20OR%20(text_en:%5C%22retain%5C%20my%5C%20business%5C%22)%20OR%20(text_en:%5C%22retain%5C%20me%5C%22)%20OR%20(text_en:%5C%22looking%5C%20elsewhere%5C%22)%20OR%20(text_en:%5C%22explore%5C%20other%5C%20options%5C%22)%20OR%20(text_en:%5C%22exploring%5C%20other%5C%20options%5C%22)%20OR%20(text_en:%5C%22better%5C%20deal%5C%20for%5C%20less%5C%22)%20OR%20(text_en:%5C%22thinking%5C%20of%5C%20leaving%5C%22)%20OR%20(text_en:%5C%22consider%5C%20cheaper%5C%20Deal%5C%22)%20OR%20(text_en:cancel)&fq=content_type:PARENT",
+            "name": "Churn - Better Deal",
+            "id": 52,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "",
+                "isPublished": true,
+                "impact": 2,
+                "description": "",
+                "searchModel": {
+                    "model": {
+                        "terms": ["\"lose my business\" \"losing my business\" \"lost my business\"  \"retain my business\" \"retain me\" \"looking elsewhere\" \"explore other options\" \"exploring other options\" \"better deal for less\" \"thinking of leaving\" \"consider cheaper Deal\" cancel"],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 3
+            }
+        },
+        {
+            "lastModifiedDateTime": "2016-01-13T12:45:06.420Z",
+            "query": "q=%7B!parent%20which%3D'content_type:PARENT'%20score%3Dtotal%7D(text_en:%5C%22out%5C%20of%5C%20stock%5C%22)%20OR%20(text_en:%5C%22no%5C%20longer%5C%20available%5C%22)&fq=%7B!parent%20which%3D'content_type:PARENT'%7D(text_en:%5C%22out%5C%20of%5C%20stock%5C%22)%20OR%20(text_en:%5C%22no%5C%20longer%5C%20available%5C%22)&fq=content_type:PARENT",
+            "name": "Phone out of stock ",
+            "id": 53,
+            "isActive": true,
+            "properties": {
+                "color": 3,
+                "lastReprocessDateTime": "2016-01-13T12:53:56.877Z",
+                "isPublished": true,
+                "impact": 2,
+                "description": "",
+                "searchModel": {
+                    "model": {
+                        "terms": ["\"out of stock\" \"no longer available\" "],
+                        "filterFields": [],
+                        "rangeFilterFields": []
+                    },
+                    "version": "1.0.0.0"
+                },
+                "lastModifiedByUserId": 2
+            }
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+	"responseHeader" : {
+		"status" : 0,
+		"QTime" : 1,
+		"params" : {
+			"facet" : "true",
+			"facet.mincount" : "1",
+			"indent" : "true",
+			"facet.query" : "content_type:CHILD",
+			"q" : "*:*",
+			"group.field" : "parentID",
+			"group" : "true",
+			"facet.field" : "{!ex=tagFortopics_f}topics_f",
+			"wt" : "json",
+			"fq" : ["{!child of='content_type:PARENT'}channel:1271",
+				"{!child of='content_type:PARENT'}date:[NOW\\-7DAY\\/DAY TO NOW]"],
+			"group.facet" : "true",
+			"rows" : "0"
+		}
+	},
+	"grouped" : {
+		"parentID" : {
+			"matches" : 0,
+			"groups" : []
+		}
+	},
+	"facet_counts" : {
+		"facet_queries" : {
+			"content_type:CHILD" : 0
+		},
+		"facet_fields" : {
+			"topics_f" : []
+		},
+		"facet_dates" : {},
+		"facet_ranges" : {},
+		"facet_intervals" : {}
+
+	}
+}

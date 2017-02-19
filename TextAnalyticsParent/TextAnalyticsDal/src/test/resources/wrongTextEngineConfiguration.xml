@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<config>
+	<tenants>
+		
+			<tenant name="moshe">
+				<channels>
+					<channel name="1111">
+						<field name="interaction_sentiment" displayName="Interaction Sentiment" dataType="Int" />
+						<field name="topics_f" displayName="Topics" dataType="Text" relationType="Utterance"/>
+						<field name="Meta_i_uteranceSentiment" displayName="Utterance Sentiment" dataType="Int" relationType="Utterance"/>
+						<field name="Meta_s_author" displayName="Author" dataType="Text" relationType="Interaction"/>
+						<field name="speaker_type" displayName="Speaker" dataType="Text" relationType="Utterance"/>
+						<field name="Meta_s_messageSourceType" displayName="Source Type" dataType="Text" relationType="Interaction"/>
+					</channel>
+					<channel name="TelcoDefaultChannel">
+						<field name="interaction_sentiment" displayName="Interaction Sentiment" dataType="Int" relationType="Interaction"/>
+						<field name="topics_f" displayName="Topics" dataType="Text" relationType="Utterance"/>
+						<field name="Meta_i_uteranceSentiment" displayName="Utterance Sentiment" dataType="Int" relationType="Utterance"/>
+						<field name="Meta_s_author" displayName="Author" dataType="Text" relationType="Interaction"/>
+						<field name="speaker_type" displayName="Speaker" dataType="Text" relationType="Utterance"/>
+						<field name="Meta_s_messageSourceType" displayName="Source Type" dataType="Text" relationType="Interaction"/>
+					</channel>
+				</channels>
+			</tenant>
+			<tenant name="talpiotEA">
+				<channels>
+					<channel name="TelcoDefaultChannel">
+						<field name="interaction_sentiment" displayName="Interaction Sentiment" dataType="Int" relationType="Interaction"/>
+						<field name="topics_f" displayName="Topics" dataType="Text" relationType="Utterance"/>
+						<field name="Meta_i_uteranceSentiment" displayName="Utterance Sentiment" dataType="Int" relationType="Utterance"/>
+						<field name="Meta_s_author" displayName="Author" dataType="Text" relationType="Interaction"/>
+						<field name="speaker_type" displayName="Speaker" dataType="Text" relationType="Utterance"/>
+						<field name="Meta_s_messageSourceType" displayName="Source Type" dataType="Text" relationType="Interaction"/>
+					</channel>				
+				</channels>
+			</tenant>
+		
+	</tenants>
+</config>

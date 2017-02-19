@@ -1,0 +1,341 @@
+{
+  "maxId": 2,
+  "savedSearches": [
+    {
+      "id": 0,
+      "name": "Abandoning customers 0",
+      "lastModifiedDateTime": "2015-09-25T17:01:20.000Z",
+      "properties": {
+        "lastModifiedByUserId": 300,
+        "isPublic": true,
+        "searchModel": {
+          "version": "1.0.0.0",
+          "model": {
+            "terms": [
+              "about0"
+            ],
+            "filterFields": [
+              {
+                "name": "topics_f",
+                "dataType": "Constant",
+                "values": [
+                  {
+                    "value": "1/Fee",
+                    "valueTitleKey": ""
+                  },
+                  {
+                    "value": "1/Service",
+                    "valueTitleKey": ""
+                  }
+                ],
+                "groupTag": "",
+                "speaker": "Any"
+              },
+              {
+                "name": "relations_f",
+                "dataType": "Constant",
+                "values": [
+                  {
+                    "value": "1/FinancialAction->Fee",
+                    "valueTitleKey": ""
+                  },
+                  {
+                    "value": "1/ChangeAction->TelcoServices",
+                    "valueTitleKey": ""
+                  }
+                ],
+                "groupTag": "",
+                "speaker": "Any"
+              },
+              {
+                "name": "Meta_s_DEPARTMENT_NAME",
+                "dataType": "Constant",
+                "values": [
+                  {
+                    "value": "q-ccc-pcln unknown product",
+                    "valueTitleKey": ""
+                  }
+                ],
+                "groupTag": "",
+                "speaker": "Any"
+              },
+              {
+                "name": "Meta_s_CUSTOMER_ID",
+                "dataType": "Constant",
+                "values": [
+                  {
+                    "value": "266623842",
+                    "valueTitleKey": ""
+                  },
+                  {
+                    "value": "266534354",
+                    "valueTitleKey": ""
+                  }
+                ],
+                "groupTag": "",
+                "speaker": "Any"
+              },
+              {
+                "name": "interaction_sentiment",
+                "dataType": "Constant",
+                "values": [
+                  {
+                    "value": "1",
+                    "valueTitleKey": ""
+                  },
+                  {
+                    "value": "0",
+                    "valueTitleKey": ""
+                  }
+                ],
+                "groupTag": "",
+                "speaker": "Any"
+              }
+            ],
+            "rangeFilterFields": [
+              {
+                "name": "date",
+                "dataType": "Constant",
+                "ranges": [
+                  {
+                    "lowerValue": "NOW-1YEAR/DAY",
+                    "isLowerInclusive": true,
+                    "upperValue": "NOW/DAY+1DAY",
+                    "isUpperInclusive": true,
+                    "key": "NOW/DAY+1DAY",
+                    "titleKey": "NOW/DAY+1DAY"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "query": "q=MyQuery"
+    },
+    {
+      "id": 1,
+      "name": "Abandoning customers 1",
+      "lastModifiedDateTime": "2015-09-23T17:01:20.000Z",
+      "properties": {
+        "lastModifiedByUserId": 301,
+        "isPublic": true,
+        "searchModel": {
+          "version": "1.0.0.0",
+          "model": {
+            "terms": [
+              "about1"
+            ],
+            "filterFields": [
+              {
+                "name": "topics_f",
+                "dataType": "Constant",
+                "values": [
+                  {
+                    "value": "1/Fee",
+                    "valueTitleKey": ""
+                  },
+                  {
+                    "value": "1/Service",
+                    "valueTitleKey": ""
+                  }
+                ],
+                "groupTag": "",
+                "speaker": "Any"
+              },
+              {
+                "name": "relations_f",
+                "dataType": "Constant",
+                "values": [
+                  {
+                    "value": "1/FinancialAction->Fee",
+                    "valueTitleKey": ""
+                  },
+                  {
+                    "value": "1/ChangeAction->TelcoServices",
+                    "valueTitleKey": ""
+                  }
+                ],
+                "groupTag": "",
+                "speaker": "Any"
+              },
+              {
+                "name": "Meta_s_DEPARTMENT_NAME",
+                "dataType": "Constant",
+                "values": [
+                  {
+                    "value": "q-ccc-pcln unknown product",
+                    "valueTitleKey": ""
+                  }
+                ],
+                "groupTag": "",
+                "speaker": "Any"
+              },
+              {
+                "name": "Meta_s_CUSTOMER_ID",
+                "dataType": "Constant",
+                "values": [
+                  {
+                    "value": "266623842",
+                    "valueTitleKey": ""
+                  },
+                  {
+                    "value": "266534354",
+                    "valueTitleKey": ""
+                  }
+                ],
+                "groupTag": "",
+                "speaker": "Any"
+              },
+              {
+                "name": "interaction_sentiment",
+                "dataType": "Constant",
+                "values": [
+                  {
+                    "value": "1",
+                    "valueTitleKey": ""
+                  },
+                  {
+                    "value": "0",
+                    "valueTitleKey": ""
+                  }
+                ],
+                "groupTag": "",
+                "speaker": "Any"
+              }
+            ],
+            "rangeFilterFields": [
+              {
+                "name": "date",
+                "dataType": "Constant",
+                "ranges": [
+                  {
+                    "lowerValue": "NOW-1YEAR/DAY",
+                    "isLowerInclusive": true,
+                    "upperValue": "NOW/DAY+1DAY",
+                    "isUpperInclusive": true,
+                    "key": "NOW/DAY+1DAY",
+                    "titleKey": "NOW/DAY+1DAY"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "query": "q=MyQuery"
+    },
+    {
+      "id": 2,
+      "name": "Abandoning customers 2",
+      "lastModifiedDateTime": "2015-09-24T17:01:20.000Z",
+      "properties": {
+        "lastModifiedByUserId": 302,
+        "isPublic": true,
+        "searchModel": {
+          "version": "1.0.0.0",
+          "model": {
+            "terms": [
+              "about2"
+            ],
+            "filterFields": [
+              {
+                "name": "topics_f",
+                "dataType": "Constant",
+                "values": [
+                  {
+                    "value": "1/Fee",
+                    "valueTitleKey": ""
+                  },
+                  {
+                    "value": "1/Service",
+                    "valueTitleKey": ""
+                  }
+                ],
+                "groupTag": "",
+                "speaker": "Any"
+              },
+              {
+                "name": "relations_f",
+                "dataType": "Constant",
+                "values": [
+                  {
+                    "value": "1/FinancialAction->Fee",
+                    "valueTitleKey": ""
+                  },
+                  {
+                    "value": "1/ChangeAction->TelcoServices",
+                    "valueTitleKey": ""
+                  }
+                ],
+                "groupTag": "",
+                "speaker": "Any"
+              },
+              {
+                "name": "Meta_s_DEPARTMENT_NAME",
+                "dataType": "Constant",
+                "values": [
+                  {
+                    "value": "q-ccc-pcln unknown product",
+                    "valueTitleKey": ""
+                  }
+                ],
+                "groupTag": "",
+                "speaker": "Any"
+              },
+              {
+                "name": "Meta_s_CUSTOMER_ID",
+                "dataType": "Constant",
+                "values": [
+                  {
+                    "value": "266623842",
+                    "valueTitleKey": ""
+                  },
+                  {
+                    "value": "266534354",
+                    "valueTitleKey": ""
+                  }
+                ],
+                "groupTag": "",
+                "speaker": "Any"
+              },
+              {
+                "name": "interaction_sentiment",
+                "dataType": "Constant",
+                "values": [
+                  {
+                    "value": "1",
+                    "valueTitleKey": ""
+                  },
+                  {
+                    "value": "0",
+                    "valueTitleKey": ""
+                  }
+                ],
+                "groupTag": "",
+                "speaker": "Any"
+              }
+            ],
+            "rangeFilterFields": [
+              {
+                "name": "date",
+                "dataType": "Constant",
+                "ranges": [
+                  {
+                    "lowerValue": "NOW-1YEAR/DAY",
+                    "isLowerInclusive": true,
+                    "upperValue": "NOW/DAY+1DAY",
+                    "isUpperInclusive": true,
+                    "key": "NOW/DAY+1DAY",
+                    "titleKey": "NOW/DAY+1DAY"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "query": "q=MyQuery"
+    }
+  ]
+}

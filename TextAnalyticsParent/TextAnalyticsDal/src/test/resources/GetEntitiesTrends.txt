@@ -1,0 +1,30 @@
+{
+	"numFounds": 22,
+	"trends": [{
+		"name": "1/Service",
+		"backgroundAverageVolume": 1.0,
+		"volume": 4.0,
+		"prVolume": 0.0,
+		"prBackground": 0.08695652173913043,
+		"absoluteChange": -0.08695652173913043,
+		"relativeChange": -1.0
+	},
+	{
+		"name": "1/Program",
+		"backgroundAverageVolume": 1.0,
+		"volume": 2.0,
+		"prVolume": 0.0,
+		"prBackground": 0.08695652173913043,
+		"absoluteChange": -0.08695652173913043,
+		"relativeChange": -1.0
+	},
+	{
+		"name": "1/Fee",
+		"backgroundAverageVolume": 6.0,
+		"volume": 1.0,
+		"prVolume": 0.0,
+		"prBackground": 0.30434782608695654,
+		"absoluteChange": -0.30434782608695654,
+		"relativeChange": -1.0
+	}]
+}

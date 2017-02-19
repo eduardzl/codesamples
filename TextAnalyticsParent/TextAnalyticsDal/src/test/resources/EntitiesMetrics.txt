@@ -1,0 +1,117 @@
+{
+  "responseHeader": {
+    "status": 0,
+    "QTime": 394,
+    "params": {
+      "q": "*:*",
+      "json.facet": "\r\n{\r\n\ttopicsFacet: {\r\n\t\ttype : terms, \r\n\t\tfield : topics_f,\r\n        mincount : 1,\r\n\t\tfacet :  {\r\n\t\t\tVolume : \"unique(parentID)\",\r\n\r\n            InteractionLevel : {\r\n                type : terms,\r\n\t            field  : content_type,\r\n\t            domain : { \r\n        \t\t    blockParent : \"content_type: PARENT\" \r\n        \t\t},\r\n\t            facet : {\r\n                    HandleTime : \"avg(Meta_l_handleTime)\",\r\n                    AvgMessagesCount : \"avg(Meta_i_messagesCount)\",\r\n                    AvgEmploeeMessagesCount : \"avg(Meta_i_employeesMessages)\",\r\n                    AvgCustomerMessagesCount : \"avg(Meta_i_customerMessages)\"\r\n\t            }\r\n            }\r\n\t\t},\r\n\t\tlimit : -1\r\n\t}\r\n}",
+      "indent": "true",
+      "fq": [
+        "channel:TelcoDefaultChannel",
+        "content_type:CHILD",
+        "{!child of='content_type:PARENT'}Meta_s_messageSourceType:\"chat\"",
+        "{!child of='content_type:PARENT'}{!parent which='content_type:PARENT'}topics_f:\"1\\/Fee\""
+      ],
+      "rows": "0",
+      "wt": "json"
+    }
+  },
+  "response": {
+    "numFound": 2757425,
+    "start": 0,
+    "maxScore": 1,
+    "docs": []
+  },
+  "facets": {
+    "count": 2757425,
+    "topicsFacet": {
+      "buckets": [
+        {
+          "val": "1/Fee",
+          "count": 365256,
+          "InteractionLevel": {
+            "buckets": [
+              {
+                "val": "PARENT",
+                "count": 124422,
+                "AvgCustomerMessagesCount": 7.496158235681793,
+                "HandleTime": 199.63518509588337,
+                "AvgMessagesCount": 22.211152368552185,
+                "AvgEmploeeMessagesCount": 10.014056999565993
+              }
+            ]
+          },
+          "Volume": 124422
+        },
+        {
+          "val": "2/Fee/price",
+          "count": 170018,
+          "InteractionLevel": {
+            "buckets": [
+              {
+                "val": "PARENT",
+                "count": 75449,
+                "AvgCustomerMessagesCount": 7.8347493008522315,
+                "HandleTime": 199.72118914763615,
+                "AvgMessagesCount": 23.110578006335405,
+                "AvgEmploeeMessagesCount": 10.560882185317235
+              }
+            ]
+          },
+          "Volume": 75449
+        },
+        {
+          "val": "2/Fee/rate",
+          "count": 87338,
+          "InteractionLevel": {
+            "buckets": [
+              {
+                "val": "PARENT",
+                "count": 52642,
+                "AvgCustomerMessagesCount": 8.129706318149006,
+                "HandleTime": 199.70170206299153,
+                "AvgMessagesCount": 23.8470232893887,
+                "AvgEmploeeMessagesCount": 11.088389498879222
+              }
+            ]
+          },
+          "Volume": 52642
+        },
+        {
+          "val": "1/Rewards",
+          "count": 75735,
+          "InteractionLevel": {
+            "buckets": [
+              {
+                "val": "PARENT",
+                "count": 40190,
+                "AvgCustomerMessagesCount": 8.102090072157253,
+                "HandleTime": 199.81336153271957,
+                "AvgMessagesCount": 23.745384423986067,
+                "AvgEmploeeMessagesCount": 11.05409305797462
+              }
+            ]
+          },
+          "Volume": 40190
+        },
+        {
+          "val": "1/Program",
+          "count": 63426,
+          "InteractionLevel": {
+            "buckets": [
+              {
+                "val": "PARENT",
+                "count": 39106,
+                "AvgCustomerMessagesCount": 7.93351403876643,
+                "HandleTime": 199.82033447552806,
+                "AvgMessagesCount": 23.539226717127807,
+                "AvgEmploeeMessagesCount": 10.699739170459775
+              }
+            ]
+          },
+          "Volume": 39106
+        }
+      ]
+    }
+  }
+}

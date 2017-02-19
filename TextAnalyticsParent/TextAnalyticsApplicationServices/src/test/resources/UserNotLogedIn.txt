@@ -1,0 +1,12 @@
+<html>
+    <head>
+        <title>UnAuthorized</title>
+    </head>
+    <body>
+        <H1>We are sorry. UnAuthorized request </H1>
+        <p>
+            <H4>
+                <a href='/wfo/control/signin'>Please login here </a>
+            </H4>
+        </body>
+    </html>

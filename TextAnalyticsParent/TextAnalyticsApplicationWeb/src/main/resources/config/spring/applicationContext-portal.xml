@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd"
+	default-lazy-init="true">
+
+	<bean class="com.verint.textanalytics.web.portal.restinfra.JacksonNamingStrategy" scope="singleton" lazy-init="true" />
+	<bean class="com.verint.textanalytics.web.portal.restinfra.CustomJsonJacksonProvider" scope="singleton" lazy-init="true" />
+
+	<bean class="com.verint.textanalytics.web.portal.restinfra.PrivilegesAnnotationExtractor" scope="singleton" lazy-init="true" />
+	<bean class="com.verint.textanalytics.web.portal.restinfra.VTASyntaxExceptionMapper" scope="singleton" />
+
+	<!-- Search Documents Services -->
+	<bean class="com.verint.textanalytics.web.portal.SearchInteractionsService" scope="singleton" lazy-init="true" />
+	<bean class="com.verint.textanalytics.web.uiservices.SearchInteractionsUIService" scope="singleton" lazy-init="true" />
+
+
+	<!-- Facets Services -->
+	<bean class="com.verint.textanalytics.web.portal.FacetsService" scope="singleton" lazy-init="true" />
+	<bean class="com.verint.textanalytics.web.uiservices.FacetsUIService" scope="singleton" lazy-init="true" />
+	
+	<!-- Stored Search Services -->
+	<bean class="com.verint.textanalytics.web.portal.StoredSearchService" scope="singleton" lazy-init="true" />
+	<bean class="com.verint.textanalytics.web.uiservices.StoredSearchUIService" scope="singleton" lazy-init="true" />
+	
+	<!-- Model Editor Services -->
+	<bean class="com.verint.textanalytics.web.portal.ModelEditorService" scope="singleton" lazy-init="true" />
+	<bean class="com.verint.textanalytics.web.uiservices.ModelEditorUIService" scope="singleton" lazy-init="true" />
+
+	<!-- Configuration Service -->
+	<bean class="com.verint.textanalytics.web.portal.ConfigurationService" scope="singleton" lazy-init="true" />
+	<bean class="com.verint.textanalytics.web.uiservices.ConfigurationUIService" scope="singleton" lazy-init="true" />
+
+	<!-- Trends Service -->
+	<bean class="com.verint.textanalytics.web.portal.TrendsService" scope="singleton" lazy-init="true"></bean>
+	<bean class="com.verint.textanalytics.web.uiservices.TrendsUIService" scope="singleton" lazy-init="true"></bean>
+
+	<!-- Suggestions Services -->
+	<bean class="com.verint.textanalytics.web.portal.SuggestionsService" scope="singleton" lazy-init="true" />
+	<bean class="com.verint.textanalytics.web.uiservices.SuggestionsUIService" scope="singleton" lazy-init="true" />
+
+	<!-- DataSourcesManagmentService Services -->
+	<bean class="com.verint.textanalytics.web.portal.DataSourcesManagmentService" scope="singleton" lazy-init="true" />
+	<bean class="com.verint.textanalytics.web.uiservices.DataSourcesManagmentUIService" scope="singleton" lazy-init="true" />
+
+	<!-- Analyze Services -->
+	<bean class="com.verint.textanalytics.web.uiservices.DailyVolumeUIService" scope="singleton" lazy-init="true" />
+
+	<!-- Analyze Services - CurrentResultSetMetricsService -->
+	<bean class="com.verint.textanalytics.web.portal.CurrentResultSetMetricsService" scope="singleton" lazy-init="true" />
+	<bean class="com.verint.textanalytics.web.uiservices.CurrentResultSetMetricsUIService" scope="singleton" lazy-init="false">
+		<constructor-arg ref="metricsSet"></constructor-arg>
+	</bean>
+
+	<bean class="com.verint.textanalytics.web.uiservices.ViewModelConverter" scope="singleton" lazy-init="true">
+		<constructor-arg ref="metricsSet"></constructor-arg>
+	</bean>
+	
+	<bean class="com.verint.textanalytics.web.uiservices.ViewModelFilter" scope="singleton" lazy-init="true"></bean>
+
+	<!-- this bean must not be lazily initialized if the exporting is to happen -->
+	<!-- 
+	<bean id="exporter" class="org.springframework.jmx.export.MBeanExporter"
+		lazy-init="false">
+		<property name="beans">
+			<map>
+				<entry key="bean:name=textAnalyticsWebAppBean" value-ref="textAnalyticsWebAppJmxBean" />
+			</map>
+		</property>
+	</bean>
+	 -->
+
+	<!-- Metrics Fields definitions -->
+
+	<bean id="averageSentimentMetric" class="com.verint.textanalytics.model.analyze.FieldMetric"
+		scope="singleton" lazy-init="true">
+		<constructor-arg name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.MetricsQuery).averageSentiment}" />
+		<constructor-arg name="fieldName" value="interaction_sentiment" />
+		<constructor-arg name="displayKey" value="METRIC_interaction_sentiment" />
+		<constructor-arg name="type" value="SENTIMENT" />
+		<constructor-arg name="statFunction" value="avg" />
+		<constructor-arg name="isInnerFacet" value="false" />
+		<constructor-arg name="index" value="1" />
+	</bean>
+		
+	<bean id="averageHandleTimeMetric" class="com.verint.textanalytics.model.analyze.FieldMetric"
+		scope="singleton" lazy-init="true">
+		<constructor-arg name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.MetricsQuery).averageHandleTime}" />
+		<constructor-arg name="fieldName" value="Meta_l_handleTime" />
+		<constructor-arg name="displayKey" value="METRIC_Meta_l_handleTime" />
+		<constructor-arg name="type" value="TIME" />
+		<constructor-arg name="statFunction" value="avg" />
+		<constructor-arg name="isInnerFacet" value="false" />
+		<constructor-arg name="index" value="2" />
+	</bean>
+	
+	<bean id="averageEmployeeResponseTimeMetric" class="com.verint.textanalytics.model.analyze.FieldMetric"
+		scope="singleton" lazy-init="true">
+		<constructor-arg name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.MetricsQuery).averageEmployeeResponseTime}" />
+		<constructor-arg name="fieldName" value="Meta_l_avgEmployeeResponseTime" />
+		<constructor-arg name="displayKey" value="METRIC_Meta_l_avgEmployeeResponseTime" />
+		<constructor-arg name="type" value="TIME" />
+		<constructor-arg name="statFunction" value="avg" />
+		<constructor-arg name="isInnerFacet" value="true" />
+		<constructor-arg name="index" value="3" />
+	</bean>
+
+	<bean id="averageCustomerResponseTimeMetric" class="com.verint.textanalytics.model.analyze.FieldMetric"
+		scope="singleton" lazy-init="true">
+		<constructor-arg name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.MetricsQuery).averageCustomerResponseTime}" />
+		<constructor-arg name="fieldName" value="Meta_l_avgCustomerResponseTime" />
+		<constructor-arg name="displayKey" value="METRIC_Meta_l_avgCustomerResponseTime" />
+		<constructor-arg name="type" value="TIME" />
+		<constructor-arg name="statFunction" value="avg" />
+		<constructor-arg name="isInnerFacet" value="false" />
+		<constructor-arg name="index" value="4" />
+	</bean>
+	
+	<bean id="averageMessagesCountMetric" class="com.verint.textanalytics.model.analyze.FieldMetric"
+		scope="singleton" lazy-init="true">
+		<constructor-arg name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.MetricsQuery).averageMessagesCount}" />
+		<constructor-arg name="fieldName" value="Meta_i_messagesCount" />
+		<constructor-arg name="displayKey" value="METRIC_Meta_i_messagesCount" />
+		<constructor-arg name="type" value="NUMBER" />
+		<constructor-arg name="statFunction" value="avg" />
+		<constructor-arg name="isInnerFacet" value="false" />
+		<constructor-arg name="index" value="5" />
+	</bean>
+	
+	<bean id="averageEmployeeMessagesMetric" class="com.verint.textanalytics.model.analyze.FieldMetric"
+		scope="singleton" lazy-init="true">
+		<constructor-arg name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.MetricsQuery).averageEmployeeMessages}" />
+		<constructor-arg name="fieldName" value="Meta_i_employeesMessages" />
+		<constructor-arg name="displayKey" value="METRIC_Meta_i_employeesMessages" />
+		<constructor-arg name="type" value="NUMBER" />
+		<constructor-arg name="statFunction" value="avg" />
+		<constructor-arg name="isInnerFacet" value="false" />
+		<constructor-arg name="index" value="6" />
+	</bean>
+	
+	<bean id="averageCustomerMessagesMetric" class="com.verint.textanalytics.model.analyze.FieldMetric"
+		scope="singleton" lazy-init="true">
+		<constructor-arg name="name" value="#{T(com.verint.textanalytics.common.constants.TAConstants.MetricsQuery).averageCustomerMessages}" />
+		<constructor-arg name="fieldName" value="Meta_i_customerMessages" />
+		<constructor-arg name="displayKey" value="METRIC_Meta_i_customerMessages" />
+		<constructor-arg name="type" value="NUMBER" />
+		<constructor-arg name="statFunction" value="avg" />
+		<constructor-arg name="isInnerFacet" value="false" />
+		<constructor-arg name="index" value="7" />
+	</bean>
+
+	<bean id="metricsSet" class="java.util.ArrayList">
+		<constructor-arg>
+			<list>
+				<ref bean="averageSentimentMetric" />
+				<ref bean="averageHandleTimeMetric" />
+				<ref bean="averageEmployeeResponseTimeMetric" />
+				<ref bean="averageCustomerResponseTimeMetric" />
+				<ref bean="averageMessagesCountMetric" />
+				<ref bean="averageEmployeeMessagesMetric" />
+				<ref bean="averageCustomerMessagesMetric" />
+			</list>
+		</constructor-arg>
+	</bean>
+
+</beans>

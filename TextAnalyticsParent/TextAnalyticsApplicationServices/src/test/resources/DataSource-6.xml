@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dat:DataSource xmlns:dat="http://witness.com/xmlModel/DataSource.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://witness.com/xmlModel/DataSource.xsd DataSource.xsd" Identifier="6" SubType="TextProject" Type="TextAnalytics" Name="ProjBA">
+  <dat:DataPorts />
+  <dat:DataPortGroups />
+  <dat:Properties>
+    <dat:Property Name="ULTRA_SWITCH_ID" Value="855000006" />
+    <dat:Property Name="USEACTUALSTAFFING" Value="false" />
+    <dat:Property Name="TIMEZONE" Value="GMT" />
+    <dat:Property Name="WINDOWS_TIMEZONE" Value="Greenwich Standard Time" />
+  </dat:Properties>
+</dat:DataSource>
+
+<!--checksum=2023295361F32A308D61C4CA1C28816D01EF8E0DF50BCB04C55E826A74E28C91 version=1-->

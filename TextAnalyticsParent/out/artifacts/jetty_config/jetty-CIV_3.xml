@@ -1,0 +1,17 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure_9_3.dtd">
+ 
+<!--
+  Configure a custom context for serving javadoc as static resources 
+-->
+ 
+<Configure class="org.eclipse.jetty.server.handler.ContextHandler">
+  <Set name="contextPath">/wfo/ui-debug/CIV</Set>  
+  <Set name="handler">
+	<New class="org.eclipse.jetty.server.handler.ResourceHandler">
+	  <Set name="directoriesListed">true</Set>
+	  <Set name="resourceBase">C:\Intellij\CIV\Scripts\App</Set>
+	  <Set name="cacheControl">max-age=3600,public</Set>
+	</New>
+  </Set>
+</Configure>

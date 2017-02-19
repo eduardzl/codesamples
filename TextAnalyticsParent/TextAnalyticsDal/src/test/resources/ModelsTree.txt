@@ -1,0 +1,11 @@
+{
+  "en": {
+    "customer_experience": {},
+    "telco": {},
+    "travel_and_leisure": {},
+    "banking": {}
+  },
+  "sp": {
+    "customer_experience": {}    
+  }
+}

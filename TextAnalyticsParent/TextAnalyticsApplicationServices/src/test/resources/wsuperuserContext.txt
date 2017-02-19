@@ -1,0 +1,35 @@
+{
+  "UserSecurityContext": {
+    "id": "-8001",
+    "securityContext": {
+      "employeeId": "null",
+      "principal": "wsuperuser",
+      "licenseItems": [],
+      "brandKey": null,
+      "roles": [],
+      "superUser": true
+    },
+    "uiPreferences": {
+      "employeeId": "null",
+      "viewTimeZone": "GMT",
+      "viewLanguage": "en_US",
+      "viewRegionalFormat": "en_US",
+      "accessibility": false
+    },
+    "userDetails": {
+      "employeeId": "null",
+      "employeeExternalId": null,
+      "orgId": null,
+      "firstName": null,
+      "lastName": null,
+      "middleName": null,
+      "dataSources": []
+    },
+    "logoVersion": "Verint - Version 15.1 (15.1.0.1003) Server Name: TLW12CON003",
+    "switchModeEnabled": true,
+    "whatIfMode": false,
+    "sendInternalMsgEnabled": true,
+    "sendPopupMsgEnabled": true,
+    "myNotificationsEnabled": false
+  }
+}

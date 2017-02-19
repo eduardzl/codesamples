@@ -1,0 +1,21 @@
+{
+  "responseHeader": {
+    "status": 0,
+    "QTime": 4,
+    "params": {
+      "q": "*:*",
+      "indent": "true",
+      "start": "0",
+      "fq": "Meta_s_interactionType: \"chwat\"",
+      "rows": "1",
+      "wt": "json",
+      "_": "1444714414763"
+    }
+  },
+  "response": {
+    "numFound": 0,
+    "start": 0,
+    "maxScore": 0,
+    "docs": []
+  }
+}

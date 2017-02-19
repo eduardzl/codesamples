@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- the package  com.verint.textanalytics.common.logger is scanned for resources and implementations -->
+<Configuration packages="com.verint.textanalytics.common.logger" monitorInterval="60">
+	<Appenders>
+		<!--
+		<RollingRandomAccessFile name="rollingFileAppender"
+								 fileName="${sys:catalina.base}/Logs/TextAnalyticsWebApp.log"
+								 filePattern="${sys:catalina.base}/Logs/TextAnalyticsWebApp-%d{yyyy-MM-dd-HH}-%i.log.gz">
+			<PatternLayout>
+				<Pattern>%d{ISO8601} [%p] %X{reqId} %c %m%n</Pattern>
+			</PatternLayout>
+			<Policies>
+				<SizeBasedTriggeringPolicy size="20 MB"/>
+				<TimeBasedTriggeringPolicy />
+			</Policies>
+			<DefaultRolloverStrategy max="50"/>
+		</RollingRandomAccessFile>
+		-->
+
+		<Console name="consoleAppender" target="SYSTEM_OUT">
+			<PatternLayout>
+				<Pattern>%d{ISO8601} [%p] %X{reqId} %c %m%n</Pattern>
+			</PatternLayout>
+		</Console>
+
+		<!--
+        <Http name="logglyHttpAppender" httpEndpointUrl="http://logs-01.loggly.com/bulk/14f90fd4-d865-4f78-b221-b91b909f29a3@41058/tag/bulk/"
+                                        dirName="TextAnalyticsWebApp" batchSize="20">
+
+            <LogglyJSONLayout complete="true" compact="false" eventEol="true"/>
+        </Http>
+
+        <VerintSDK name="verintSDKLoggerAppender" nativeResourceName64="native/JnaTestLibrary64.dll" nativeResourceName86="native/JnaTestLibrary86.dll">
+            <PatternLayout>
+                <Pattern>%d [%p] %c %m%n</Pattern>
+            </PatternLayout>
+        </VerintSDK>
+        -->
+
+		<Async name="asyncAppender">
+			<AppenderRef ref="consoleAppender"/>
+		</Async>
+
+	</Appenders>
+
+	<Loggers>
+		<Logger name="org.springframework" level="error" additivity="false">
+			<AppenderRef ref="asyncAppender"/>
+		</Logger>
+
+		<Logger name="net.sf.ehcache" level="error" additivity="false">
+			<AppenderRef ref="asyncAppender"/>
+		</Logger>
+
+		<Logger name="com.verint.textanalytics.common.diagnostics" level="error" additivity="false">
+			<AppenderRef ref="asyncAppender"/>
+		</Logger>
+
+		<Logger name="com.verint.textanalytics.bl.security.FileMembershipProvider" level="error" additivity="false">
+			<AppenderRef ref="asyncAppender"/>
+		</Logger>
+
+		<Logger name="org.eclipse.jetty" level="error" additivity="false">
+			<AppenderRef ref="asyncAppender"/>
+		</Logger>
+
+		<!--   messages to be logged once by the root logger and again by the specific logger as you may have both the appenders configured -->
+		<Root level="debug" additivity="false">
+			<AppenderRef ref="asyncAppender"/>
+		</Root>
+	</Loggers>
+</Configuration>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="ehcache.xsd" 
+	updateCheck="false"
+	monitoring="autodetect" 
+	dynamicConfig="true">
+	<defaultCache
+		name="default"
+		maxEntriesLocalHeap="10000"
+		eternal="false"
+		timeToIdleSeconds="120"
+		timeToLiveSeconds="120"
+		maxEntriesLocalDisk="100000"
+		diskExpiryThreadIntervalSeconds="120"
+		memoryStoreEvictionPolicy="LRU">
+		<persistence strategy="localTempSwap"/>
+	</defaultCache>
+	
+	<cache name="TextAnalyticsCache" 
+	 		maxElementsInMemory="10000" 
+	 		eternal="false" 
+	 		timeToLiveSeconds="3600" 
+	 		diskPersistent="false" 
+	 		memoryStoreEvictionPolicy="LRU" 
+	 		overflowToDisk="false" />
+	 		
+	 		<cache name="TextAnalyticsPrivilegesCache" 
+	 		maxElementsInMemory="10000" 
+	 		eternal="false" 
+	 		timeToLiveSeconds="3600"
+	 		diskPersistent="false" 
+	 		memoryStoreEvictionPolicy="LRU" 
+	 		overflowToDisk="false" />
+	 		
+	 		<!-- Cache of 30 min -->
+	 		<cache name="TextAnalyticsLongTermCache" 
+	 		maxElementsInMemory="10000" 
+	 		eternal="false" 
+	 		timeToLiveSeconds="600"
+	 		diskPersistent="false" 
+	 		memoryStoreEvictionPolicy="LRU" 
+	 		overflowToDisk="false" />
+	 		
+	 		<!-- Cache of 10 min -->
+	 		<cache name="TextAnalyticsShortTermCache" 
+	 		maxElementsInMemory="10000" 
+	 		eternal="false" 
+	 		timeToLiveSeconds="600" 
+	 		diskPersistent="false" 
+	 		memoryStoreEvictionPolicy="LRU" 
+	 		overflowToDisk="false" />
+	 		
+	 		<!-- Cache of 15 min -->
+	 		<cache name="TextAnalyticsUserCache" 
+	 		maxElementsInMemory="10000" 
+	 		eternal="false" 
+	 		timeToLiveSeconds="900" 
+	 		diskPersistent="false" 
+	 		memoryStoreEvictionPolicy="LRU" 
+	 		overflowToDisk="false" />
+
+	<!-- Cache of 60 min -->
+	<cache name="TextAnalyticsLanguageCache"
+		   maxElementsInMemory="10000"
+		   eternal="false"
+		   timeToLiveSeconds="3600"
+		   diskPersistent="false"
+		   memoryStoreEvictionPolicy="LRU"
+		   overflowToDisk="false"/>
+</ehcache>

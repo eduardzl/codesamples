@@ -1,0 +1,392 @@
+{
+	"responseHeader" : {
+		"status" : 0,
+		"QTime" : 3,
+		"params" : {
+			"indent" : "true",
+			"q" : "*:*",
+			"hl.q" : "(\"samsung\")",
+			"hl.fl" : "text_en",
+			"wt" : "json",
+			"fq" : ["{!child of='content_type:PARENT'}channel:1271",
+				"{!child of='content_type:PARENT'}id:(\"15\" OR \"7\" OR \"8\" OR \"19\")"],
+			"hl" : "true",
+			"rows" : "1000"
+		}
+	},
+	"response" : {
+		"numFound" : 17,
+		"start" : 0,
+		"docs" : [{
+				"id" : "15-1",
+				"date": "2015-10-18T10:36:03Z",
+				"speaker_type": "automated",
+				"Meta_s_parentID" : "15",
+				"content_type" : "CHILD",
+				"topics" : ["/device/samsung|S22_E26 2|S29_E30 0|S30_E30 0|S7_E22 -1|S28_E29 2|S13_E13"],
+				"topics_f" : ["/device/samsung|S22_E26 2|S29_E30 0|S30_E30 0|S7_E22 -1|S28_E29 2|S13_E13"],
+				"text_en" : ["Android (vulnerable), Windows phone (why would anyone buy into MS again) and iPhone (arrogant but can and probably will fall)."],
+				"Meta_i_sentiment" : -1,
+				"_root_" : ["15"],
+				"_version_" : 1497622740676378624
+			}, {
+				"id" : "15-2",
+				"date": "2015-10-18T10:36:03Z",
+                "speaker_type": "automated",
+				"Meta_s_parentID" : "15",
+				"content_type" : "CHILD",
+				"text_en" : ["I cant stand Samsung devices, had one briefly and the junk they had piled on top of Android was astonishing, sold it within a week and bought my first Nexus phone. I don't use any of the 'top ten' battery drainers. Having no friends has it's advantages."],
+				"topics" : ["/device/samsung|S22_E26",
+					"/device/iphone|S22_E26"],
+				"topics_f" : ["/device/samsung|S22_E26",
+					"/device/iphone|S22_E26"],
+				"Meta_i_sentiment" : -2,
+				"_root_" : ["15"],
+				"_version_" : 1497622740677427200
+			}, {
+				"id" : "15-3",
+				"date": "2015-10-18T10:36:03Z",
+                "speaker_type": "automated",
+				"Meta_s_parentID" : "15",
+				"content_type" : "CHILD",
+				"text_en" : ["or you could just try windows phone with the power saver which controls which apps are allowed to work in the background"],
+				"topics" : ["/device/samsung|S22_E26",
+					"/device/iphone|S22_E26"],
+				"topics_f" : ["/device/samsung|S22_E26",
+					"/device/iphone|S22_E26"],
+				"Meta_i_sentiment" : -2,
+				"_root_" : ["15"],
+				"_version_" : 1497622740677427201
+			}, {
+				"id" : "15-4",
+				"date": "2015-10-18T10:36:03Z",
+                "speaker_type": "automated",
+				"Meta_s_parentID" : "15",
+				"content_type" : "CHILD",
+				"text_en" : ["The biggest user for me is always Android System, which has a ton of services listed under it with no way of knowing which one is the problem.  Because of this the battery usage monitor is completely useless to me."],
+				"topics" : ["/device/samsung|S22_E26",
+					"/device/iphone|S22_E26"],
+				"topics_f" : ["/device/samsung|S22_E26",
+					"/device/iphone|S22_E26"],
+				"Meta_i_sentiment" : -2,
+				"_root_" : ["15"],
+				"_version_" : 1497622740678475776
+			}, {
+				"id" : "7-1",
+				"date": "2015-10-18T10:36:03Z",
+                "speaker_type": "automated",
+				"Meta_s_parentID" : "7",
+				"content_type" : "CHILD",
+				"topics" : ["/device|S13_E13",
+					"/device/samsung|S22_E27 2|S29_E30 0|S30_E30 0|S7_E22 -1|S28_E29 2|S13_E13",
+					"/device/samsung/galaxy s3|S22_E27 2|S29_E30 0|S30_E30 0|S7_E22 -1|S28_E29 2|S13_E13"],
+				"topics_f" : ["/device|S13_E13",
+					"/device/samsung|S22_E27 2|S29_E30 0|S30_E30 0|S7_E22 -1|S28_E29 2|S13_E13",
+					"/device/samsung/galaxy s3|S22_E27 2|S29_E30 0|S30_E30 0|S7_E22 -1|S28_E29 2|S13_E13"],
+				"text_en" : ["I have a Samsung Galaxy S 3. Periodically it freezes up. I can't swipe the screen or open any apps. I'm also unable to use the menu button. I can't cut the phone off with the power button. The only way to unfreeze the phone is to take the battery out and restart it. This is happening more often. What can I do to solve this problem? Thanks"],
+				"Meta_i_sentiment" : -1,
+				"_root_" : ["7"],
+				"_version_" : 1497622740694204416
+			}, {
+				"id" : "7-2",
+				"date": "2015-10-18T10:36:03Z",
+                "speaker_type": "automated",
+				"Meta_s_parentID" : "7",
+				"content_type" : "CHILD",
+				"text_en" : ["I was so impressed with the 'I apologize' comment again, and the response of 'it is considered a mis-communication' when directed to a product.\n           I guess you need to research and find all your 'OWN' answers before engaging with a customer service representative in a store. I am including the \n           letter I wrote to the CEO, and that was the response I received back for my efforts, 'I apologize, but nothing we can do'. So I am including the\n           letter here, and on every other social media platform I frequent, every blog, communication I perform with friends, co-workers, peers, and the many connections\n           I have established in my over 30 years of management in customer relation businesses.:To: Randall StephensonFrom: JamesRe: Service/ComplaintMr. \n           Stephenson,I will honestly say I am typing this and trying to remain calm as I do so. I have become so frustrated with your customer service team, the run around,\n           poor service at one of the store locations, either the deliberate misdirection or poor training with the selling specialists, I felt compelled to take the time and write\n           this letter of complaint. I hope after reading, you can come up with a solution that satisfies your business sense of customer service, as well as, my sense of the capability\n           of your company to provide that customer service.To start, I had a company provided cell phone (Samsung Galaxy S4 Active), which used the AT&T service here in Alaska\n           and was impressed with the coverage and service your company provided. In November, my company xxxxxxxxxxxxxxx communicated to all managers within the organization,\n           that they would be transitioning to a Bring Your Own Device (BYOD) program. Being impressed with the coverage your company provided up here, I went to your Wasilla,\n           Alaska store to check my options. I say impressed due to the fact, that we have tried several providers up here for our delivery trucks, transportation drivers, etc,\n           and all were found lacking for coverage or customer service until I had the company try AT&T for our service provider. Since the switch, we have had no issues with \n           connectivity or service. So, I arrive at the Wasilla, Alaska location, wait patiently for about 45 minutes to get someone to help me (they were busy, around December\n           16th, so holiday shopping, and quite understandable), and when the young lady called my name, explained I had to transition to a cell phone for my company. I showed her  \n           the Samsung Galaxy I had and explained that due to the email, texting, internet, etc. I would need to perform my managerial duties, I wanted a smartphone as a replacement. \n           I explained that I loved the android platform and found it very easy to use and inquired into the choices I had for the same type of operating system with AT&Ts \n           Go Phone Program. Being a company phone, I explained I did not want to enter into a contract for the phone, but the Go Phone program seemed perfect for my needs and even\n           though the re-imbursement from my company would not cover all the costs, still felt it was worth the extra expense compared with some other options here in Alaska since \n           I was impressed with the coverage. My answer: Android platform phones were only provided with 'contracts” and that the Go Phone program offered"],
+				"topics" : ["/device|S22_E27",
+					"/device/samsung|S22_E27",
+					"/device/samsung/Samsung Galaxy S4 Active LTE-A|S22_E27"],
+				"topics_f" : ["/device|S22_E27",
+					"/device/samsung|S22_E27",
+					"/device/samsung/Samsung Galaxy S4 Active LTE-A|S22_E27"],
+				"Meta_i_sentiment" : -2,
+				"_root_" : ["7"],
+				"_version_" : 1497622740695252992
+			}, {
+				"id" : "7-3",
+				"date": "2015-10-18T10:36:03Z",
+                "speaker_type": "automated",
+				"Meta_s_parentID" : "7",
+				"content_type" : "CHILD",
+				"text_en" : ["AS of today, I am no longer an AT&T fan and will be telling all of my friends to avoid using AT&T if at all possible. \n           I have been a loyal customer for many years and all I wanted to do was upgrade my phone from an IPhone 5 to a Samsung Galaxy 5. \n           I was eligible. The sales rep at Best Buy said I could use the next plan, it would cost me $27 per month, I would receive a $25 credit per month for 2 years \n          and all I would pay more per month was $2 and change. First bill comes in and I'm paying $27 more per month and when I call, the AT&T rep just tries to explain\n          why I'm getting shafted, twice. I've had it! Phone goes back tonight!"],
+				"topics" : ["/device|S22_E27",
+					"/device/samsung|S22_E27",
+					"/device/samsung/galaxy S5|S22_E27",
+					"/device/iphone|S22_E27"],
+				"topics_f" : ["/device|S22_E27",
+					"/device/samsung|S22_E27",
+					"/device/samsung/galaxy S5|S22_E27",
+					"/device/iphone|S22_E27"],
+				"Meta_i_sentiment" : -2,
+				"_root_" : ["7"],
+				"_version_" : 1497622740697350144
+			}, {
+				"id" : "7-4",
+				"date": "2015-10-18T10:36:03Z",
+                "speaker_type": "automated",
+				"Meta_s_parentID" : "7",
+				"content_type" : "CHILD",
+				"text_en" : ["I am a faithful paying customer and have been for years, my payment has NEVER been sent late and service is most horrible on my Samsung Galaxy S5. \n          Certain apps never load and I pay too steep of a bill to be having these problems. \n          I'm considering slicing my bill in half like that advertisement and hoping with another service all together. This needs to be resolved like yesterday."],
+				"topics" : ["/device|S22_E27",
+					"/device/samsung|S22_E27",
+					"/device/samsung/galaxy S5|S22_E27",
+					"/device/iphone|S22_E27"],
+				"topics_f" : ["/device|S22_E27",
+					"/device/samsung|S22_E27",
+					"/device/samsung/galaxy S5|S22_E27",
+					"/device/iphone|S22_E27"],
+				"Meta_i_sentiment" : -2,
+				"_root_" : ["7"],
+				"_version_" : 1497622740698398720
+			}, {
+				"id" : "8-1",
+				"date": "2015-10-18T10:36:03Z",
+                "speaker_type": "automated",
+				"Meta_s_parentID" : "8",
+				"content_type" : "CHILD",
+				"topics" : ["/device|S22_E28 2|S29_E30 0|S30_E30 0|S8_E22 -1|S28_E29",
+					"/device/samsung|S22_E28 2|S29_E30 0|S30_E30 0|S8_E22 -1|S28_E29 2|S13_E13",
+					"/device/samsung/galaxy|S22_E28 2|S29_E30 0|S30_E30 0|S8_E22 -1|S28_E29 2|S13_E13"],
+				"topics_f" : ["/device|S22_E28 2|S29_E30 0|S30_E30 0|S8_E22 -1|S28_E29",
+					"/device/samsung|S22_E28 2|S29_E30 0|S30_E30 0|S8_E22 -1|S28_E29 2|S13_E13",
+					"/device/samsung/galaxy|S22_E28 2|S29_E30 0|S30_E30 0|S8_E22 -1|S28_E29 2|S13_E13"],
+				"text_en" : ["Today we upgraded our phones with AT&T. We did the plan switch on the phone. The gentleman was quick and kind, he was very patient with my fathers every question. He then told us we could pick the phones up at the store or have them shipped. I decided to go to the store and pick them up. Now my family lives in crofton, so we had to decided between the bowie and the annapolis store. We decided Annapolis, and thank baby Jesus we did. The lady who checked us in was sweet and very professional (i forget her name) she was an African American lady. She got Sydnie to help us. Sydnie was nothing shy than amazing, and a breath of fresh air. She set up four phones in under two hours. Two of the phones had to be set up and ready to go (My parents phones, and they cant be bothered with doing it themselves). I wanted her to leave my phone alone as i wanted to set it up myself (I should have let her do it, its taken me far to long) all three were Iphone 6. My sisters phone was a samsung galaxy (she had that one ready to in a snap). Then for the accessories. I am super picky and had spent a decent tine looking for a cover i would like. I gave up as i wasn't able to find anything i liked. Well not Sydnie, she found the perfect case I wanted, with very little information to go on. She found the perfect folio case. My phone an wallet are one in the same. She helped us select two cases for my parents that they love (they were not even in the store at the time). She then quickly applied the tempered glass screen onto my sisters galaxy, without skipping a beat. Sydnie was amazing. We usually rely on a gentleman who works there and has been helping us out for years ( My parents have a loyalty to him as he is married to a South African, because we are from South Africa). He wasn't there today, and not because I don't like him but because I am so happy to have met and been helped by Sydnie. I sincerely hope that AT&T are looking after her well. Thank you so much for all your help. I hope you rise through the ranks quickly. You understand customer service and it shows."],
+				"Meta_i_sentiment" : -1,
+				"_root_" : ["8"],
+				"_version_" : 1497622740727758848
+			}, {
+				"id" : "8-2",
+				"date": "2015-10-18T10:36:03Z",
+                "speaker_type": "automated",
+				"Meta_s_parentID" : "8",
+				"content_type" : "CHILD",
+				"text_en" : [" just wanted to say I love your services so much and the employees at AT&T's. My internet is the best and completely affordable and I have a wonderful phone plan. My Samsung Galaxy S5 under AT&T is the best phone I have ever had. Plus employees are willing to help anytime and have a outstanding personality to their customers. Thanks AT&T, keep up the good work!! #AHappyCustomer"],
+				"topics" : ["/device|S22_E28",
+					"/device/samsung|S22_E28",
+					"/device/samsung/galaxy S4|22_E28"],
+				"topics_f" : ["/device|S22_E28",
+					"/device/samsung|S22_E28",
+					"/device/samsung/galaxy S4|22_E28"],
+				"Meta_i_sentiment" : -2,
+				"_root_" : ["8"],
+				"_version_" : 1497622740729856000
+			}, {
+				"id" : "8-3",
+				"date": "2015-10-18T10:36:03Z",
+                "speaker_type": "automated",
+				"Meta_s_parentID" : "8",
+				"content_type" : "CHILD",
+				"text_en" : ["Unless Anthem has changed their policies in recent years, they never had our kids' or wife's social security numbers. All information and filing was under husband's social security number. Years ago records were under policy holder's number (aka husband), later they switched to policy/member number and anytime you contact them, they confirm with patients birth-date, never"],
+				"topics" : ["/device/samsung|S22_E28",
+					"/device/iphone|S22_E28"],
+				"topics_f" : ["/device/samsung|S22_E28",
+					"/device/iphone|S22_E28"],
+				"Meta_i_sentiment" : 2,
+				"_root_" : ["8"],
+				"_version_" : 1497622740729856001
+			}, {
+				"id" : "8-4",
+				"date": "2015-10-18T10:36:03Z",
+                "speaker_type": "automated",
+				"Meta_s_parentID" : "8",
+				"content_type" : "CHILD",
+				"text_en" : ["Just going to say this, not too happy with Verizon due to the fact ive been rolled over to a new plan for this year with the same 3 gigs, not being asked if i wanted to upgrade my data because me and my father now have awesome Samsung Galaxy S5s. i was on 3GB up until now, had to upgrade due to data usage (and the My Verizon account management didnt let me upgrade, i had to go fishing around myself on both phone AND computer to change my data, OH and they offered me a free gig of data for $0 which i have been trying to find, dont think i have and i think now im going to be charged an additional $10 for my change for the Data usage). AND i was hoping to do what i did last time, up my data for a 1 time charge of $10 or $15 but clearly dont see that option and AFTER my upgrade to my plan (and finding out someone else had their email and was my account manager who ive NEVER heard of this person, thankfully i fixed that real fast, i hope...) NOW my phone gives me prompts of 'would you like to change your plan?' My Verizon is a double edged sword i feel, i DONT like that i was being charged $60 for inferior data when clearly someone shouldve said, or hell, the company shouldve just emailed/texted me 'you have 3 gigs and we have this plan for you which is exactly what youre paying now, want to upgrade?. but then again, that is optimism, i shouldnt expect a big corporate to lend their hand out to the little guy but I will at least have my voice heard and i know i dont stand alone."],
+				"topics" : ["/device|S22_E28",
+					"/device/samsung|S22_E28",
+					"/device/samsung/galaxy S5|22_E28"],
+				"topics_f" : ["/device|S22_E28",
+					"/device/samsung|S22_E28",
+					"/device/samsung/galaxy S5|22_E28"],
+				"Meta_i_sentiment" : 1,
+				"_root_" : ["8"],
+				"_version_" : 1497622740730904576
+			}, {
+				"id" : "8-5",
+				"date": "2015-10-18T10:36:03Z",
+                "speaker_type": "automated",
+				"Meta_s_parentID" : "8",
+				"content_type" : "CHILD",
+				"text_en" : ["Just purchased new Samsung Galaxy Note 4. Love the phone but there is a mark on Battery cover need replacement I've sent a request via FB messages waiting for reply"],
+				"topics" : ["/device|S22_E28",
+					"/device/samsung|S22_E28",
+					"/device/samsung/galaxy Note 4|22_E28"],
+				"topics_f" : ["/device|S22_E28",
+					"/device/samsung|S22_E28",
+					"/device/samsung/galaxy Note 4|22_E28"],
+				"Meta_i_sentiment" : 1,
+				"_root_" : ["8"],
+				"_version_" : 1497622740731953152
+			}, {
+				"id" : "19-1",
+				"date": "2015-10-18T10:36:03Z",
+                "speaker_type": "automated",
+				"Meta_s_parentID" : "19",
+				"content_type" : "CHILD",
+				"topics" : ["/service|S22_E26",
+					"/service/assurance|S22_E26"],
+				"topics_f" : ["/service|S22_E26",
+					"/service/assurance|S22_E26"],
+				"text_en" : ["Reference ID 00DE0czFk._500E0IWWqdA big shout out to Michael, Travis, and Tiffany to helping Dianne Humphreys get her phone working again! The AT&T Social Care Division knows how to do its job right, and it does its job well. Now it is time to initiate a company-wide Quality Assurance and/or Accountability check, starting with your call centers and business offices to weed out the employees that caused our problem in the first place. Put an end the days where you pay someone to be useless. One last thing, guys. I noticed that I have good internet connection to online games whose servers use AT&T connections (such as StarCraft II), but terrible lag on games whose servers don't (Left 4 Dead, Borderlands, Mass Effect 3 multiplayer). Do you have an infrastructure problem, or is this evidence of the Net Neutrality controversy? It's a rhetorical question, but feel free to answer that."],
+				"Meta_i_sentiment" : -1,
+				"speaker_type" : "Customer",
+				"_root_" : ["19"],
+				"_version_" : 1497622740747681792
+			}, {
+				"id" : "19-2",
+				"date": "2015-10-18T10:36:03Z",
+                "speaker_type": "automated",
+				"Meta_s_parentID" : "19",
+				"content_type" : "CHILD",
+				"text_en" : ["As a customer for over ten years with over seven active lines I would just like to share with you what horrific customer service your customer care and loyalty depts are providing. After an issue I had a 'new' phone sent out to me under warranty last July. That phone overheated so badly It put my four year old into urgent care for burns on her thumb and palm. I was advised to go to a store and they researched my phone for days leaving me with nothing then told me a new phone would be sent to me and not to return the dangerous one. So I left it with them. Then suddenly in November I was charged a restocking fee. I had to pay over $200 of my own money to drive across state(and mountain passes) to go get the phone and send it back. Under the assurance they would take the fee off. Upwards of ten representatives helped me from late nov to now. All politely apologizing for the mistake and dangerous phone and assuring me i would not be charged. Putting the fee balance on hold while it was corrected. Well now you have HAD the phone since DECEMBER 22 and not taken off the fee..and today your supervisor in loyalty Lydia rep#0653226 very rudely told me not only did the previous reps promises and advice not mean anything but that I would not be getting the fee taken off. I am APPALLED by this service. Not only do I feel taken advantage of but stupid to have put my faith in your company to take care of a loyal customer put in danger and harmed by your phone. I trusted your company,most people would have sued for what happened to my child and contacted the media. I however stayed loyal to my longtime company and put the issue in your hands to fix. I feel horrified at how wrong I was and how AWFUL I have been treated. I will be sharing this story with everyone I know and all clients and parents who come inside my store as it is next to your tukwila southcenter location. I will share my story on fb so no one else can be harmed physically, financially, and emotionally the way I have from you!!! You should be ashamed!!"],
+				"topics" : ["/service|S22_E26",
+					"/service/customer service|S22_E26"],
+				"topics_f" : ["/service|S22_E26",
+					"/service/customer service|S22_E26"],
+				"Meta_i_sentiment" : -2,
+				"speaker_type" : "Customer",
+				"_root_" : ["19"],
+				"_version_" : 1497622740748730368
+			}, {
+				"id" : "19-3",
+				"date": "2015-10-18T10:36:03Z",
+                "speaker_type": "automated",
+				"Meta_s_parentID" : "19",
+				"content_type" : "CHILD",
+				"text_en" : ["Hi James. Thank You for reaching out to us. AT&T is actively working on the Android 5.0 Lollipop software update for the Samsung Galaxy S5. All software updates go through a rigorous quality assurance testing process before being released. We will release Lollipop for the Galaxy S5 as soon as testing is complete, and we’ll post on our Consumer Blog: http://blogs.att.net/consumerblog when it’s available. We appreciate your patience. Thank You. RaymonaS, AT&T Social Media Manager."],
+				"topics" : ["/service|S22_E26",
+					"/service/support|S22_E26",
+					"/service/support/customer service|S22_E26"],
+				"topics_f" : ["/service|S22_E26",
+					"/service/support|S22_E26",
+					"/service/support/customer service|S22_E26"],
+				"Meta_i_sentiment" : -2,
+				"speaker_type" : "Agent",
+				"_root_" : ["19"],
+				"_version_" : 1497622740749778944
+			}, {
+				"id" : "19-4",
+				"date": "2015-10-18T10:36:03Z",
+                "speaker_type": "automated",
+				"Meta_s_parentID" : "19",
+				"content_type" : "CHILD",
+				"text_en" : ["Hi James. Thank You for reaching out to us. AT&T is actively working on the Android 5.0 Lollipop software update for the Samsung Galaxy S5. All software updates go through a rigorous quality assurance testing process before being released. We will release Lollipop for the Galaxy S5 as soon as testing is complete, and we’ll post on our Consumer Blog: http://blogs.att.net/consumerblog when it’s available. We appreciate your patience. Thank You. RaymonaS, AT&T Social Media Manager."],
+				"topics" : ["/service|S22_E26",
+					"/service/assurance|S22_E26",
+					"/service/customer service|S22_E26",
+					"/service/support|S22_E26"],
+				"topics_f" : ["/service|S22_E26",
+					"/service/assurance|S22_E26",
+					"/service/customer service|S22_E26",
+					"/service/support|S22_E26"],
+				"Meta_i_sentiment" : -2,
+				"speaker_type" : "Customer",
+				"_root_" : ["19"],
+				"_version_" : 1497622740750827520
+			}
+		]
+	},
+	"highlighting" : {
+		"15-1" : {
+			"text_en" : []
+		},
+		"15-2" : {
+			"text_en" : [{
+					"term" : "samsung",
+					"starts" : 13,
+					"ends" : 20
+				}
+			]
+		},
+		"15-3" : {
+			"text_en" : []
+		},
+		"15-4" : {
+			"text_en" : []
+		},
+		"7-1" : {
+			"text_en" : [{
+					"term" : "samsung",
+					"starts" : 9,
+					"ends" : 16
+				}
+			]
+		},
+		"7-2" : {
+			"text_en" : [{
+					"term" : "samsung",
+					"starts" : 1434,
+					"ends" : 1441
+				} 
+			]
+		},
+		"7-3" : {
+			"text_en" : [{
+					"term" : "samsung",
+					"starts" : 240,
+					"ends" : 247
+				}
+			]
+		},
+		"7-4" : {
+			"text_en" : [{
+					"term" : "samsung",
+					"starts" : 128,
+					"ends" : 135
+				}
+			]
+		},
+		"8-1" : {
+			"text_en" : [{
+					"term" : "samsung",
+					"starts" : 980,
+					"ends" : 987
+				}
+			]
+		},
+		"8-2" : {
+			"text_en" : [{
+					"term" : "samsung",
+					"starts" : 166,
+					"ends" : 173
+				}
+			]
+		},
+		"8-3" : {
+			"text_en" : []
+		},
+		"8-4" : {
+			"text_en" : [{
+					"term" : "samsung",
+					"starts" : 227,
+					"ends" : 234
+				}
+			]
+		},
+		"8-5" : {
+			"text_en" : [{
+					"term" : "samsung",
+					"starts" : 19,
+					"ends" : 26
+				}
+			]
+		},
+		"19-1" : {
+			"text_en" : []
+		},
+		"19-2" : {
+			"text_en" : []
+		},
+		"19-3" : {
+			"text_en" : [{
+					"term" : "samsung",
+					"starts" : 121,
+					"ends" : 128
+				}
+			]
+		},
+		"19-4" : {
+			"text_en" : []
+		}
+	}
+}

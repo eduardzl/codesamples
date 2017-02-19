@@ -1,0 +1,134 @@
+{
+  "responseHeader":{
+    "status":0,
+    "QTime":3,
+    "params":{
+      "indent":"true",
+      "q":"*:*",
+      "hl.q":"(\"iphone\" \"samsung\" \"phone\" \"Android\")",
+      "hl.fl":"text_en",
+      "wt":"json",
+      "fq":["{!child of='content_type:PARENT'}channel:1271",
+        "{!child of='content_type:PARENT'}date:[NOW\\-1YEAR\\/DAY TO NOW]",
+        "((text_en:\"iphone\") OR (text_en:\"samsung\"))",
+        "(text_en:\"phone\")",
+        "(text_en:\"Android\")"],
+      "hl":"true",
+      "rows":"1000"}},
+  "response":{"numFound":3,"start":0,"docs":[
+      {
+        "id":"15-1",
+        "date": "2012-04-07T13:07:49Z",
+        "parentID":"15",
+        "content_type":"CHILD",
+        "topics":["/device/samsung|S22_E26 2|S29_E30 0|S30_E30 0|S7_E22 -1|S28_E29 2|S13_E13"],
+        "topics_f":["/device/samsung|S22_E26 2|S29_E30 0|S30_E30 0|S7_E22 -1|S28_E29 2|S13_E13"],
+        "text_en":["Android (vulnerable), Windows phone (why would anyone buy into MS again) and iPhone (arrogant but can and probably will fall)."],
+        "Meta_i_sentiment":-1,
+        "_root_":["15"],
+        "_version_":1497622740676378624},
+      {
+        "id":"15-2",
+        "date": "2012-04-07T13:07:49Z",
+        "parentID":"15",
+        "content_type":"CHILD",
+        "text_en":["I cant stand Samsung devices, had one briefly and the junk they had piled on top of Android was astonishing, sold it within a week and bought my first Nexus phone. I don't use any of the 'top ten' battery drainers. Having no friends has it's advantages."],
+        "topics":["/device/samsung|S22_E26",
+          "/device/iphone|S22_E26"],
+        "topics_f":["/device/samsung|S22_E26",
+          "/device/iphone|S22_E26"],
+        "Meta_i_sentiment":-2,
+        "_root_":["15"],
+        "_version_":1497622740677427200},
+      {
+        "id":"7-2",
+        "date": "2012-04-07T13:07:49Z",
+        "parentID":"7",
+        "content_type":"CHILD",
+        "text_en":["I was so impressed with the 'I apologize' comment again, and the response of 'it is considered a mis-communication' when directed to a product.\n           I guess you need to research and find all your 'OWN' answers before engaging with a customer service representative in a store. I am including the \n           letter I wrote to the CEO, and that was the response I received back for my efforts, 'I apologize, but nothing we can do'. So I am including the\n           letter here, and on every other social media platform I frequent, every blog, communication I perform with friends, co-workers, peers, and the many connections\n           I have established in my over 30 years of management in customer relation businesses.:To: Randall StephensonFrom: JamesRe: Service/ComplaintMr. \n           Stephenson,I will honestly say I am typing this and trying to remain calm as I do so. I have become so frustrated with your customer service team, the run around,\n           poor service at one of the store locations, either the deliberate misdirection or poor training with the selling specialists, I felt compelled to take the time and write\n           this letter of complaint. I hope after reading, you can come up with a solution that satisfies your business sense of customer service, as well as, my sense of the capability\n           of your company to provide that customer service.To start, I had a company provided cell phone (Samsung Galaxy S4 Active), which used the AT&T service here in Alaska\n           and was impressed with the coverage and service your company provided. In November, my company xxxxxxxxxxxxxxx communicated to all managers within the organization,\n           that they would be transitioning to a Bring Your Own Device (BYOD) program. Being impressed with the coverage your company provided up here, I went to your Wasilla,\n           Alaska store to check my options. I say impressed due to the fact, that we have tried several providers up here for our delivery trucks, transportation drivers, etc,\n           and all were found lacking for coverage or customer service until I had the company try AT&T for our service provider. Since the switch, we have had no issues with \n           connectivity or service. So, I arrive at the Wasilla, Alaska location, wait patiently for about 45 minutes to get someone to help me (they were busy, around December\n           16th, so holiday shopping, and quite understandable), and when the young lady called my name, explained I had to transition to a cell phone for my company. I showed her  \n           the Samsung Galaxy I had and explained that due to the email, texting, internet, etc. I would need to perform my managerial duties, I wanted a smartphone as a replacement. \n           I explained that I loved the android platform and found it very easy to use and inquired into the choices I had for the same type of operating system with AT&Ts \n           Go Phone Program. Being a company phone, I explained I did not want to enter into a contract for the phone, but the Go Phone program seemed perfect for my needs and even\n           though the re-imbursement from my company would not cover all the costs, still felt it was worth the extra expense compared with some other options here in Alaska since \n           I was impressed with the coverage. My answer: Android platform phones were only provided with 'contracts” and that the Go Phone program offered"],
+        "topics":["/device|S22_E27",
+          "/device/samsung|S22_E27",
+          "/device/samsung/Samsung Galaxy S4 Active LTE-A|S22_E27"],
+        "topics_f":["/device|S22_E27",
+          "/device/samsung|S22_E27",
+          "/device/samsung/Samsung Galaxy S4 Active LTE-A|S22_E27"],
+        "Meta_i_sentiment":-2,
+        "_root_":["7"],
+        "_version_":1497622740695252992}]
+  },
+  "highlighting":{
+    "15-1":{
+      "text_en":[{
+          "term":"android",
+          "starts":1,
+          "ends":7},
+        {
+          "term":"phone",
+          "starts":30,
+          "ends":35},
+        {
+          "term":"iphon",
+          "starts":77,
+          "ends":83}]},
+    "15-2":{
+      "text_en":[{
+          "term":"samsung",
+          "starts":13,
+          "ends":20},
+        {
+          "term":"android",
+          "starts":84,
+          "ends":91},
+        {
+          "term":"phone",
+          "starts":157,
+          "ends":162}]},
+    "7-2":{
+      "text_en":[{
+          "term":"phone",
+          "starts":1427,
+          "ends":1432},
+        {
+          "term":"samsung",
+          "starts":1434,
+          "ends":1441},
+        {
+          "term":"phone",
+          "starts":2531,
+          "ends":2536},
+        {
+          "term":"samsung",
+          "starts":2583,
+          "ends":2590},
+        {
+          "term":"android",
+          "starts":2792,
+          "ends":2799},
+        {
+          "term":"phone",
+          "starts":2939,
+          "ends":2944},
+        {
+          "term":"phone",
+          "starts":2970,
+          "ends":2975},
+        {
+          "term":"phone",
+          "starts":3037,
+          "ends":3042},
+        {
+          "term":"phone",
+          "starts":3055,
+          "ends":3060},
+        {
+          "term":"android",
+          "starts":3344,
+          "ends":3351},
+        {
+          "term":"phone",
+          "starts":3361,
+          "ends":3367},
+        {
+          "term":"phone",
+          "starts":3420,
+          "ends":3425}]}}}
